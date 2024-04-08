@@ -1,0 +1,370 @@
+@font-face {
+    font-family: "Gaegu";
+    src: url(../font/Gaegu/Gaegu-Regular.ttf);
+}
+
+body {
+    font-family: Gaegu;
+    position: relative;
+}
+
+* {cursor: url(https://cur.cursors-4u.net/nature/nat-10/nat927.ani), url(https://cur.cursors-4u.net/nature/nat-10/nat927.png), auto !important;}
+
+/* fixed(상담,카톡,Top)*/
+
+
+
+/* .fixed>.fixed-box:last-child {
+    background-color: #a0a0a0;
+}
+
+.fixed>.fixed-box:first-child {
+    background-color: #FEE500;
+} */
+
+/* Top 부분 */
+
+.linkFiexd>img {
+    max-width: 70px;
+    max-height: 70px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* border: 1px solid black; */
+}
+
+.linkFiexd>p {
+    font-family: Gaegu;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+#kakao-fixed {
+    width: 100px;
+    height: 100px;
+    /* border: 1px solid  pink; */
+    background-color: #FEE500;
+    position: fixed;
+    bottom: 300px;
+    right: 0%;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px 30px 0 0;
+    
+}
+
+#customer-fixed {
+    border-radius: 0 0 30px 30px;
+    width: 100px;
+    height: 100px;
+    /* border: 1px solid  pink; */
+    background-color: #a0a0a0;
+    position: fixed;
+    bottom: 200px;
+    right: 0%;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+#top-fixed {
+    color: gray;
+    font-size: 50px;
+    position: fixed;
+    bottom: 5%;
+    right: 3.5%;
+    z-index: 100;
+}
+
+#top-fixed>img:hover {
+    background-color: rgb(39, 37, 37);
+    border-radius: 50px;
+    transition: 1s;
+}
+
+#top-fixed>img {
+    max-width: 50px;
+    max-height: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 헤더 부분 */
+header>.inner>.mainIcon>.login {
+    position: absolute;
+    right: 10%;
+    top: 20%;
+}
+
+header>.inner>.mainIcon>.login>ul {
+    display: flex;
+    justify-content: right;
+    padding: 0;
+}
+
+header>.inner>.mainIcon>.login>ul>li {
+    padding: 10px;
+    font-size: 15px;
+    font-weight: 700;
+    border-right: 3px solid rgba(248, 195, 203, 0.849);
+    border-bottom: 3px solid rgba(248, 195, 203, 0.849);
+    border-radius: 100000px;
+    box-shadow: 1px 1px 1px rgba(248, 195, 203, 0.849);
+    padding: 15px;
+}
+
+header>.inner>.mainIcon>.login>ul>li>a {
+    cursor: pointer;
+    padding: 10px;
+}
+
+header>.inner>.mainIcon>.login>ul>li:hover {
+    background-color: rgba(248, 195, 203, 0.849);
+    transform: translate(5px, 5px);
+    border: none;
+    /* border-radius: 0; */
+    transition: 0.7s;
+}
+
+/* header>.inner>.mainIcon>.login>ul>li>a>img {
+    cursor: pointer;
+} */
+
+header>.inner>.mainIcon {
+    display: flex;
+    justify-content: center;
+    padding: 0 50px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.inner>.mainIcon>div>a>#mainLogoImg {
+    width: 200px;
+    height: 150px;
+    margin: 0;
+    box-sizing: border-box;
+    margin-bottom: -5px;
+    z-index: 0;
+}
+
+header>.inner>.mainIcon>.title>img {
+    position: absolute;
+    left: 7%;
+    bottom: 0;
+    font-size: 50px;
+    width: 200px;
+    height: 150px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* nav 부분 */
+.nav {
+    max-width: 100%;
+    height: 60px;
+    position: sticky;
+    top: 0;
+    background-color: rgba(248, 195, 203, 0.849);
+    z-index: 10;
+    margin: 0 auto 50px;
+    border-radius: 20px;
+}
+
+.nav>ul {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+
+}
+
+.nav>ul>li {
+    font-size: 25px;
+    font-weight: 700;
+    padding: 0 40px;
+}
+
+.nav>ul>li>a {
+    padding: 10px;
+    line-height: 65px;
+}
+
+.nav>ul>li>a:hover {
+    color: white;
+    transition: 0.3s;
+}
+
+
+
+
+/* footer 부분 */
+footer {
+    height: 250px;
+    background-color: rgb(77, 82, 82);
+}
+
+
+footer>.inner>.up>ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+footer>.inner>.up>ul>li {
+    padding: 45px 15px 5px;
+}
+
+footer>.inner>.up>ul>li>a {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    color: rgba(138, 148, 143, 0.842);
+}
+
+footer>.inner>.up a:hover {
+    color: rgba(128, 123, 123, 0.89);
+}
+
+footer>.inner>.up>ul #gain {
+    color: white;
+}
+
+footer>.inner>.up>ul #gain:hover {
+    color: rgb(202, 194, 194);
+}
+
+footer>.inner>.down>p,
+footer>.inner>.down>span {
+    font-size: 13px;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 700;
+    color: gray;
+    margin: 20px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 로그인 팝업창*/
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9998;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    /* 팝업 창의 너비를 조정합니다. */
+    height: 400px;
+    /* 팝업 창의 높이를 조정합니다. */
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+}
+
+.popup>.login-logo {
+    font-size: 30px;
+    font-weight: 600;
+    margin: 30px 0 50px 40px;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.popup>#loginForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+.popup>#loginForm>.loginBtn {
+    margin: 40px 0;
+    width: 90%;
+    height: 40px;
+    cursor: pointer;
+    font-weight: 700;
+    border: none;
+    background-color: rgb(219, 211, 211);
+}
+
+.popup>#loginForm>.input-box {
+    width: 90%;
+    height: 40px;
+    border: 1px solid gray;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.popup>#loginForm>.input-box:first-child {
+    border-bottom: none;
+}
+
+.popup>#loginForm>.other-info {
+    font-size: 15px;
+    font-weight: 550;
+    margin: 10px;
+}
+
+.popup>.close {
+    float: right;
+    cursor: pointer;
+    font-size: 30px;
+    /* 닫기 버튼의 크기를 조정합니다. */
+    padding: 5px;
+    /* 닫기 버튼의 내부 여백을 조정합니다. */
+}
+/* 벚꽃 */

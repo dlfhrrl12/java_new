@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="myNum">
+    <script>
+        document.getElementById('myNum').addEventListener('change',function(){
+            let value = parseInt(this.value);
+
+            if(isNaN(value)){
+                console.error("숫자를 입력하세요");
+            }else if(value <= 0){
+                console.error("0보다 큰 숫자를 입력하세요");
+            }else{
+                console.log(`입력된 값 : ${value}`);
+            }
+        });
+    </script>
+</body>
+</html>

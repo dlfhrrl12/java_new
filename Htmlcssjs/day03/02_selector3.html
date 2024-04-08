@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>selector3</title>
+    <!--
+        속성 서택자(attribute selector)
+        태그가 가지고 있는 속성을 선택하는 문법
+        input 태그에서 주로 사용
+        태그[속성=값]
+    -->
+    <style>
+        input[type=text]{
+            background-color: aqua;
+        }
+        input[type=password]{
+            background-color: bisque;
+        }
+        button[type=submit]:hover{
+            background-color: brown;
+        }
+        /* button[class=btn]{
+            background-color: blue;
+        } */
+        button.btn{
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <div>
+            <label for="id">User ID</label>
+            <input type="text" name="id" id="id" placeholder="8자 이상" required>
+        </div>
+        <div>
+            <label for="pw">User Password</label>
+            <input type="password" name="pw" id="pw" placeholder="8자 이상" required>
+        </div>
+        <div>
+            <label for="pin">User Pin</label>
+            <input type="password" name="pin" id="pin" placeholder="숫자 6자리" required>
+        </div>
+        <button type="submit">login</button>
+    </form>
+    <button type="button" class="btn">일반버튼</button>
+    <button type="submit">전송버튼</button>
+    <button type="reset" class="btn">취소버튼</button>
+</body>
+</html>

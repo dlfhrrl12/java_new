@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/07_글쓰기.css">
+    <link rel="stylesheet" href="./css/공용.css">
+</head>
+
+<body>
+
+    <a href="https://www.kakaocorp.com/page/service/service/KakaoTalk" id="kakao-fixed" class="linkFiexd"><img src="./img/00_공용/kakaotalkFixed.png" alt="">
+        <p>카톡상담</p>
+    </a>
+    <a href="https://support.google.com/?hl=ko" id="customer-fixed" class="linkFiexd"><img src="./img/00_공용/고객상담Fixed.png" alt="">
+        <p>고객센터</p>
+    </a>
+    <a href="#top" id="top-fixed"><img src="./img/00_공용/TopButton.png" alt=""></a>
+
+    <header>
+        <div class="inner" id="#top">
+            <div class="mainIcon">
+                <div>
+                    <a href="./01_메인페이지.html"><img id="mainLogoImg" src="./img/00_공용/이게멍냥.jpg" alt=""></a>
+                </div>
+                <div class="login">
+                    <ul>
+                        <li><a href="" class="mypage">마이페이지</a></li>
+                        <li><a onclick="openPopup()" class="login-popup">로그인</a></li>
+                        <li><a href="./02_회원가입_01.html" id="sign-up-popup">회원가입</a></li>
+                    </ul>
+                </div>
+                <a href="./01_메인페이지.html" class="title" id="public-title"><img src="./img/00_공용/로고이미지.PNG" alt=""></a>
+            </div>
+        </div>
+    </header>
+    <div class="nav">
+        <ul>
+            <li><a href="./강아지,고양이 상세/03_강아지.html" id="public-dog">강아지</a></li>
+            <li><a href="./강아지,고양이 상세/01_고양이.html" id="public-cat">고양이</a></li>
+            <li><a href="./08_혜택,제휴.html" id="public-benefits">혜택</a></li>
+            <li><a href="./09_오시는길.html" id="public-direction">오시는 길</a></li>
+            <li><a href="./06_분양후기.html" id="public-review">입양 후기</a></li>
+            <li><a href="./10_반려동물추천.html" id="public-suggestion">반려동물 추천</a></li>
+            <li><a href="./07_문의게시판.html" id="public-inquiry">문의 사항</a></li>
+        </ul>
+    </div>
+
+    <form action="">
+        <h1>문 의 게 시 판</h1><br>
+        <hr>
+        작성자 : <input type="text" name="name" value="이름"><br>
+        제목 : <input type="text" name="title"> <input type="checkbox"> <span>관리자만 보기!</span>
+        <h3>내용</h3>
+        <textarea cols="200" rows="30"></textarea><br>
+        <br>
+        <hr>
+        <br>
+        <hr>
+        <h3>파일첨부</h3>
+        <input type="text" disabled> <input type="file" value="파일 선택"><br>
+        <input type="text" disabled> <input type="file" value="파일 선택"><br>
+        <input type="text" disabled> <input type="file" value="파일 선택"><br>
+        <br>
+        <pre>-파일 확장자가 zip, pdf, hwp, doc, docx, txt, xls, xlsx, ppt, pptx, jpg, jpeg, gif, png, egg, dwg, max, psd, ai인 파일만
+        업로드하실 수 있읍니다. (파일명은 특수문자 *, #, $, 등 & 공백 사용금지!) </pre>
+        <pre>-파일 업로드 시, 첨부파일 1개당 200MB 까지 가능합니다.</pre><br>
+        <hr>
+        <button type="button" id="no">취소</button>
+        <button type="button" id="ok">등록</button>
+
+    </form>
+
+    <footer>
+        <div class="inner">
+            <div class="up">
+                <ul>
+                    <li><a href="https://sw.ezenac.co.kr/ezen/campus/campus_info.asp">회사소개</a></li>
+                    <li><a href="https://sw.ezenac.co.kr/ezen/etc/terms_conditions.asp">서비스이용약관</a></li>
+                    <li><a href="https://sw.ezenac.co.kr/ezen/etc/privacy_policy.asp" id="gain">개인정보 처리방침</a></li>
+                </ul>
+            </div>
+            <div class="down">
+                <p>이개멍냥 Company</p>
+                <p>대표자: 김이젠</p>
+                <p>인천광역시 남동구 인주대로 593 엔타스빌딩 12층</p>
+                <p>영업시간 : 09:00-21:00 연중무휴</p>
+                <p>T.02-6956-2408 &nbsp; F.02-6951-2418 &nbsp; Copyright by EZEN. All rights reserved</p>
+            </div>
+        </div>
+        </div>
+    </footer>
+
+
+
+
+    <!-- 로그인 팝업 페이지 -->
+
+    <div id="loginPopup" class="popup">
+        <span class="close" onclick="closePopup()">&times;</span>
+        <h2 class="login-logo">로그인</h2>
+        <form id="loginForm">
+            <input type="text" class="input-box" id="username" name="username" placeholder=" 아이디">
+            <input type="password" class="input-box" id="password" name="password" placeholder=" 비밀번호">
+            <button type="button" class="loginBtn" onclick="login()" disabled>로그인</button>
+            <a href="./02_회원가입_01.html" class="other-info">회원가입</a>
+            <a href="" class="other-info">아이디· 비밀번호 찾기</a>
+        </form>
+    </div>
+
+    <div id="overlay" class="overlay"></div>
+
+    <script src="./js/공용.js"></script>
+
+    <script>
+        document.getElementById('no').addEventListener('click', () => {
+            alert('작성을 취소하였습니다.');
+            location.reload();
+
+        });
+        document.getElementById('ok').addEventListener('click', () => {
+            alert('등록이 완료되었습니다.');
+            location.href = "./07_문의게시판.html";
+        });
+    </script>
+
+</body>
+
+</html>

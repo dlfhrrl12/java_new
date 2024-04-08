@@ -1,0 +1,288 @@
+@font-face {
+    font-family: Gaegu;
+    src: url(../font/Gaegu-Regular.ttf);
+}
+
+body{        
+    font-family: Gaegu;
+    
+    }
+.top{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+.top :nth-of-type(1){
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+.top :nth-of-type(2){
+    font-size: 50px;
+}
+/* 상단 후기이벤트 */
+
+/* .mid>.ho{
+    display: flex;
+    justify-content: left;
+} */
+
+.mid>a{
+    top: 0;
+    position: sticky;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    z-index: 1;
+}
+.mid>a>span{
+    font-size: 30px;
+    color: red;
+    z-index: 3;
+}
+.review-title{
+border-top: 3px solid black;
+display: flex;
+justify-content: space-between;
+
+}
+.review-title>p{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+.text{
+    text-align: center;
+    border-top: 2px solid gray;
+    border-bottom: 2px solid gray;
+}
+.text>span{
+    word-spacing: normal;
+}
+.review-title,.text{
+    width: 1200px;
+    text-align: center;
+    margin: 0 auto;
+}
+.text>img{
+    margin-bottom: 30px;
+    margin-left: 10px;
+    width: 400px;
+    height: 600px;
+}
+.list{
+    display: flex;
+    justify-content: space-around;
+    margin-left: 1100px;
+    margin-top: 30px;
+}
+.list a{
+    font-size: 20px;
+}
+.list>button{
+   width: 100px;
+   height: 50px;
+   background-color: palevioletred;
+   border: 1px solid gray;
+   margin-bottom: 10px;
+   font-weight: 700;
+   box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+   outline: 1px solid rgba(255, 255, 255, 0.5);
+   -webkit-transition: all 1.25s cubic-bezier(0.19, 1, 0.22, 1);
+   transition: all 1.25s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.list>button>a{
+    color: white;
+}
+.list>button:hover{
+    border-color: orange;
+    color: white;
+    box-shadow: 0 0.5em 0.5em -0.4em yellow;
+    transform: translateY(-10px);
+    border: 1px solid;
+	box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.2);
+	outline-color: rgba(255, 255, 255, 0);
+	outline-offset: 15px;
+	text-shadow: 1px 1px 2px #427388;
+
+}
+/* 댓글창 */
+#wapper{
+    width: 1200px;
+    margin: 0 auto;
+    /* height: 200px; */
+    
+}
+#wapper h2{
+    text-align: center;
+}
+#wapper form{
+    background-color: #ec8888;
+    color: black;
+    text-align: center;
+    padding: 30px 40px;
+    border: 1px solid gray;
+}
+#wapper form input{
+    border: none;
+    outline: none;
+    width: 500px;
+    font-size: 15px;
+    padding: 10px;
+    border: 1px solid gray;
+    
+}
+#wapper form button{
+    padding: 10px;
+    border: none;
+    background-color: white;
+    box-shadow: 5px 5px 5px rgb(68, 66, 66);
+    cursor: pointer;
+    font-size: 14px;
+}
+#wapper div ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin-bottom: 20px;
+    border: 1px solid gray;
+}
+#wapper div ul li{
+    cursor: pointer;
+    padding: 12px 10px;
+    background-color: beige;
+    position: relative;
+
+}
+/* 목록버튼 */
+.list>button{
+    font-weight: 700;
+    position: relative;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    padding: 8px 16px;
+    
+    min-width: 8em;
+    text-align: center;
+    color: #fff;
+    background-image: linear-gradient(to bottom, #f12828, #a00332, #9f0f31), linear-gradient(to bottom, #ae0034, #6f094c);
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+    box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), inset 0 -1px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.25);
+    transition-property: transform, filter;
+    transition-duration: 0.2s;
+    will-change: transform;
+    resize: both;
+
+}
+.list>button::after {
+    --overflow-x: 4px;
+    --snow-image: url("https://assets.codepen.io/4175254/snow-cap-test-2.png");
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: calc(var(--overflow-x) * -1);
+    border-image-source: var(--snow-image);
+    border-image-slice: calc(6 * 56 / 20) fill;
+    border-image-width: calc(28px / 3);
+    border-image-repeat: round;
+    width: calc(100% + var(--overflow-x) * 2);
+    height: 28px;
+    filter: drop-shadow(0 2px 1px rgba(0, 0, 0, 0.25));
+    opacity: 1;
+    -webkit-animation: fade-in 2s;
+            animation: fade-in 2s;
+  }
+.list>button:active {
+    transform: scale(0.92);
+    filter: brightness(0.8);
+  }
+/*  */
+/* 댓글 추가버튼 */
+#add{
+    font-weight: 700;
+    position: relative;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    padding: 8px 16px;
+    
+    min-width: 8em;
+    text-align: center;
+    color: #fff;
+    background-image: linear-gradient(to bottom, #f12828, #a00332, #9f0f31), linear-gradient(to bottom, #ae0034, #6f094c);
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+    box-shadow: inset 0 1px rgba(255, 255, 255, 0.25), inset 0 -1px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.25);
+    transition-property: transform, filter;
+    transition-duration: 0.2s;
+    will-change: transform;
+    resize: both;
+
+}
+#add:hover{
+    transform: translateY(-10px);
+}
+#add::after {
+    
+    --overflow-x: 4px;
+    --snow-image: url("https://assets.codepen.io/4175254/snow-cap-test-2.png");
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: calc(var(--overflow-x) * -1);
+    border-image-source: var(--snow-image);
+    border-image-slice: calc(6 * 56 / 20) fill;
+    border-image-width: calc(28px / 3);
+    border-image-repeat: round;
+    width: calc(100% + var(--overflow-x) * 2);
+    height: 28px;
+    filter: drop-shadow(0 2px 1px rgba(0, 0, 0, 0.25));
+    opacity: 1;
+    -webkit-animation: fade-in 2s;
+            animation: fade-in 2s;
+  }
+#add:active {
+    transform: scale(0.92);
+    filter: brightness(0.8);
+    
+  }
+  /* 댓글 추가버튼 끝 */
+
+#wapper div ul li:nth-child(odd){
+    background-color: bisque;
+}
+#wapper div ul li:hover{
+    background-color: white;
+    transition: 0.5s;
+}
+.close{
+    position: absolute;
+    background-color: pink;
+    top: 0;
+    right: 0;
+    padding: 12px 20px;
+    transition: 0.5s;
+    height: 15px;
+    border: 1px solid gray;
+}
+.close:hover{
+    background-color: red;
+    color: white;
+}
+#wapper h2,span{
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+/* 끝 */
+.next{
+    width: 1000px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    margin-left: 400px;
+}
+.text>span{
+font-size: 20px;
+font-family: Arial, Helvetica, sans-serif;
+font-weight: 200;
+}

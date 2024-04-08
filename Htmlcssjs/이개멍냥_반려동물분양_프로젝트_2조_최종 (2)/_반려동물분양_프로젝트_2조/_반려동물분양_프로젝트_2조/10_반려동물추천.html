@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgba(75, 72, 72, 0.384);
+            margin: 0;
+            padding: 0;
+        }
+
+
+        .inner-box>.menu {
+            list-style: none;
+            width: 250px;
+            /* width: 100%; */
+            /* background-color: red; */
+            padding: 0;
+        }
+
+        .inner-box>.menu>li {
+            margin: 8px 0;
+            position: relative;
+            background-color: #2b2b2b;
+            border-radius: 2px;
+            overflow: hidden;
+            font-size: 20px;
+            color: white;
+        }
+
+        .inner-box>.menu li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 5px;
+            background-color: rgb(246, 66, 66);
+            transition: 0.3s all ease-in-out;
+        }
+
+
+
+        .inner-box>.menu li:hover::before {
+            border-radius: 0 50px 50px 0;
+            width: 110%;
+        }
+
+
+        .inner-box>.menu>li>button {
+            display: block;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 500;
+            color: white;
+            position: relative;
+            z-index: 1;
+        }
+
+        .inner-box>.dog>li>button {
+            display: block;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 500;
+            color: white;
+            position: relative;
+            z-index: 1;
+        }
+
+        .inner-box>.menu>.item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 80px;
+            opacity: 0;
+            transition: 0.5s ease-in;
+        }
+
+        .inner-box>.menu>.item.active {
+            margin-top: 0;
+            opacity: 1;
+        }
+
+
+
+        .container {
+            width: 1000vw;
+            height: 800px;
+            display: flex;
+            justify-content: center;
+            align-items: start;
+        }
+
+        .inner-box {
+            width: 100vw;
+            height: 800px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            /* border: 1px solid red; */
+        }
+
+        .inner-box>ul>li>button {
+            border: none;
+            background-color: transparent;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+        }
+
+        /* .inner-box>h1 {
+            margin-left: 40px;
+            margin-bottom: 100px;
+            border: 1px solid black;
+        } */
+
+        #resultImage-box {
+            width: 600px;
+            height: 400px;
+            z-index: 100;
+        }
+
+        #resultImage {
+            /* width: 700px;
+            height: 500px; */
+            width: 100%;
+            height: 100%;
+
+            /* z-index: 100; */
+        }
+
+        #resultText {
+            width: 600px;
+            height: 200px;
+            /* border: 1px solid black; */
+            border-top: none;
+            line-height: 50px;
+            font-weight: 700;
+            background-color: white;
+            z-index: 0;
+        }
+
+        #fixed-bar {
+            height: 10px;
+            background-color: brown;
+            border-radius: 50px;
+            position: absolute;
+            bottom: 25%;
+            left: 33%;
+            z-index: 2;
+        }
+
+        #full-bar {
+            width: 630px;
+            height: 10px;
+            background-color: white;
+            border-radius: 50px;
+            position: absolute;
+            bottom: 25%;
+            left: 33%;
+            z-index: 1;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="fixed-bar"></div>
+    <div id="full-bar"></div>
+
+    <div style="overflow: hidden;">
+        <div class="container">
+            <div class="inner-box">
+                <h1>나에게 맞는 반려동물</h1>
+                <ul class="menu">
+                    <li class="item">i<button type="button" class="btn">시작하기</button></li>
+                </ul>
+            </div>
+            <div class="inner-box">
+                <h1>키우고 싶은 <br> 반려동물의 종류는?</h1>
+                <ul class="menu">
+                    <li class="item">i<button type="button" class="btn choice-animal" id="dog">강아지</button></li>
+                    <li class="item">i<button type="button" class="btn choice-animal" id="cat">고양이</button></li>
+                </ul>
+            </div>
+            <!-- 강아지를 선택했을 경우만 나타내게 -->
+            <div class="inner-box">
+                <h1>가족구성원의 수는?</h1>
+                <ul class="menu">
+                    <li class="item">i<button type="button" class="btn">1인</button></li>
+                    <li class="item">i<button type="button" class="btn">2인</button></li>
+                    <li class="item">i<button type="button" class="btn">3인</button></li>
+                    <li class="item">i<button type="button" class="btn">4인이상</button></li>
+                </ul>
+            </div>
+            <div class="inner-box">
+                <h1>현재 거주하고 있는 <br> 거주지의 형태는?</h1>
+                <ul class="menu">
+                    <li class="item">i<button type="button" class="btn">아파트/빌라</button></li>
+                    <li class="item">i<button type="button" class="btn">오피스텔/단독주택(정원미보유)</button></li>
+                    <li class="item">i<button type="button" class="btn">단독주택(정원보유)</button></li>
+                    <li class="item">i<button type="button" class="btn">실외 및 상업공간</button></li>
+                    <li class="item">i<button type="button" class="btn">기타</button></li>
+                </ul>
+            </div>
+            <div class="inner-box">
+                <h1>원하는 반려동물의 <br>성향은?</h1>
+                <ul class="menu">
+                    <li class="item">i<button type="button" class="btn" id="yes-activity">활발하고 밝은 아이</button></li>
+                    <li class="item">i<button type="button" class="btn" id="no-activity">얌전하고 독립적인 아이</button></li>
+                </ul>
+            </div>
+            <div class="inner-box">
+                <h1>반려동물의 털빠짐이<br>걱정되시나요?</h1>
+                <ul class="menu">
+                    <li class="item">i<button type="button" class="btn" id="yes-lossHair">네</button></li>
+                    <li class="item">i<button type="button" class="btn" id="no-lossHair">아니요</button></li>
+                </ul>
+            </div>
+            <div class="inner-box">
+                <h1>반려동물을<br>키워본 경험은?</h1>
+                <ul class="menu">
+                    <li class="item">i<button type="button" class="btn">있다</button></li>
+                    <li class="item">i<button type="button" class="btn">없다</button></li>
+                </ul>
+            </div>
+            <div class="inner-box">
+                <h1>하루에 반려동물이 <br> 혼자있는 시간은?</h1>
+                <ul class="menu">
+                    <li class="item">i<button type="button" class="btn">2시간 미만</button></li>
+                    <li class="item">i<button type="button" class="btn">2시간 이상 6시간 미만</button></li>
+                    <li class="item">i<button type="button" class="btn">6시간 이상</button></li>
+                </ul>
+            </div>
+            <div class="inner-box">
+                <h1>반려견을 키우고 <br>싶은 이유는?</h1>
+                <ul class="menu">
+                    <li class="item">i<button type="button" class="btn last">동물이 너무 좋아서</button></li>
+                    <li class="item">i<button type="button" class="btn last">외로워서</button></li>
+                    <li class="item">i<button type="button" class="btn last">아이가 키우고 싶어 해서</button></li>
+                </ul>
+            </div>
+            <div class="inner-box">
+                <h1 id="result">결과창</h1>
+                <div id="resultImage-box"><img id="resultImage" src="" alt=""></div>
+                <div id="resultText"></div>
+                <ul class="menu">
+                    <li class="item">i<button type="button" class="btn" id="replay">다시하기</button></li>
+                    <li class="item">i<button type="button" class="btn" id="review-animal"></button></li>
+                    <li class="item">i<button type="button" class="btn" id="homeMove" >메인페이지 이동</button></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        let item = document.querySelectorAll('.item');
+        let cnt = 0;
+
+        function activeFun() {
+            item[cnt].classList.add('active');
+            cnt++;
+            if (cnt >= item.length) {
+                clearInterval(addActive);
+            }
+        }
+
+        let addActive = setInterval(activeFun, 130);
+
+
+
+        /*
+        type : 반려동물의 유형
+        name : 반려동물의 이름
+        hairLoss : 털빠짐이 있는가
+        activity : 활동적인지
+        */
+        let filteredData = [
+            { type: 'dog', name: '말티즈', hairLoss: 'no', activity: 'yes', explanation: '말티즈의 체중은 보통  3~4kg 정도이며, 모색은 흰색입니다.  말티즈는 활발하고 다정다감한 성격으로 사람들을 잘 따르는 귀여운 강아지입니다.' },
+            { type: 'dog', name: '토이푸들', hairLoss: 'no', activity: 'yes', explanation: '토이푸들의 체중은 약 2~3kg 정도이며, 모색은 다양합니다.성격은 활발하고 온화하지만 가족을 지키려는 본능이 강해 낯선 사람에게 공격성과 짖음이 있을 수 있습니다.' },
+            { type: 'dog', name: '포메라니안', hairLoss: 'yes', activity: 'yes', explanation: '포메라니안은 털 빠짐이 심하며 털 관리가 많이 필요한 견종입니다.  성격은 활발하고 에너지 넘치지만 사회화 훈련이 잘되지 않는다면 사납고 참을성이 없으며 예민해질 수 있습니다.' },
+            { type: 'dog', name: '요크셔테리어', hairLoss: 'yes', activity: 'no', explanation: '요크셔테리어이 친구의 부드러운 털이 길게 바닥까지 늘어뜨렸을 때, 사람들은 마치 비단을 닮았다고 찬사를 보내곤 합니다. 아름다운 외모 덕분에 ‘움직이는 보석’이라는 별명까지 얻을 정도로 세계인의 사랑을 한 몸에 받는 견종입니다.' },
+            { type: 'dog', name: '비숑프리제', hairLoss: 'no', activity: 'no', explanation: '비숑은 털이 돌돌 말린 형태를 띠고 있으며 털 빠짐이 적은 편입니다. 비숑은 친화력이 좋은 편이고, 지능이 높아 교육이나 훈련을 시킨다면 사람들과도 편하게 지낼 수 있습니다.' },
+            { type: 'cat', name: '러시안블루', hairLoss: 'no', activity: 'no', explanation: '러시안 블루는 차분하고 우아한 외모로 유명한 고양이의 한 종류입니다. 중형에서 대형까지 다양한 크기의 고양이로, 성격은 조용하고 차분하며 사람들에게는 예의 바른 태도를 보이고, 주인과의 애착을 형성합니다.' },
+            { type: 'cat', name: '아메리칸쇼트헤어', hairLoss: 'no', activity: 'yes', explanation: '아메리칸 쇼트헤어는 짧고 매끈한 털을 가진 고양이입니다.  아메리칸 쇼트헤어는 활발하고 사교적인 성격으로 알려져 있습니다. 호기심이 많고 지적인 편이며, 사람들과 잘 어울립니다. 또한, 활동적이고 놀이를 좋아하며, 적응력이 뛰어나고 친화력이 높습니다. ' },
+            { type: 'cat', name: '스핑크스', hairLoss: 'no', activity: 'yes', explanation: '스핑크스는 독특한 외모를 가지고 있으며 털이 거의 없거나 매우 짧습니다. 스핑크스의 피부는 특별한 관리가 필요한데 주기적인 목욕으로 피부의 분비물을 제거하고, 피부를 보호하기 위해 적절한 보습제를 사용하는 것이 중요합니다' },
+            { type: 'cat', name: '랙돌', hairLoss: 'yes', activity: 'no', explanation: '랙돌은 대형 고양이 종으로 알려져 있으며, 사교적이고, 온화한 성격으로 유명합니다. 또 매우 조용하고 차분한 성격을 갖고 있으며, 다른 동물과도 잘 지내는 편입니다.털이 길고 부드러워서 털 관리를 신경 써서 해주셔야 합니다.' },
+            { type: 'cat', name: '샴', hairLoss: 'yes', activity: 'yes', explanation: '샴은 중형에서 대형까지 다양한 크기를 가지고 있으며 사람들과의 상호 작용을 즐기는 활발하고 사교적인 성격을 가지고 있습니다. ' },
+        ];
+
+
+        let type = ''; // 동물 타입 저장
+
+        document.addEventListener('click', (e) => {
+
+
+            console.log(filteredData);
+            let target = e.target;
+
+            //동물 type
+            if (target.id == 'dog') {
+                filteredData = filteredData.filter((filteredData) => filteredData.type === 'dog');
+                document.getElementById('review-animal').innerText = '다른 강아지 보러가기';
+                type = 'dog';
+                return;
+            } else if (target.id == 'cat') {
+                filteredData = filteredData.filter((filteredData) => filteredData.type === 'cat');
+                document.getElementById('review-animal').innerText = '다른 고양이 보러가기';
+                type = 'cat';
+                return;
+            }
+
+            //활발함
+            if (target.id == 'yes-activity') {
+                filteredData = filteredData.filter((filteredData) => filteredData.activity === 'yes');
+
+                return;
+            } else if (target.id == 'no-activity') {
+                filteredData = filteredData.filter((filteredData) => filteredData.activity === 'no');
+                return;
+            }
+
+            //털빠짐
+            if (target.id == 'yes-lossHair') {
+                filteredData = filteredData.filter((filteredData) => filteredData.hairLoss === 'yes');
+            } else if (target.id == 'no-lossHair') {
+                filteredData = filteredData.filter((filteredData) => filteredData.hairLoss === 'no');
+            }
+
+            //이름으로 사진 송출
+            let ran = Math.floor(Math.random() * filteredData.length);  //랜덤값 생성 두개 이상일 경우 쓸 랜덤값
+
+            // console.log(typeof filteredData.length);
+            // console.log(ran);
+
+            if (target.classList[1] == 'last' && filteredData.length >= 2) {
+                barNone();
+                document.getElementById('result').innerText = `${filteredData[ran].name}`
+                document.getElementById('resultImage').src = `./img/10_반려동물추천/${filteredData[ran].name}.jpg`;
+                document.getElementById('resultText').innerText = filteredData[ran].explanation;
+                return;
+            } else if (target.classList[1] == 'last' && filteredData.length < 2) {
+                barNone();
+                document.getElementById('result').innerText = `${filteredData[0].name}`
+                document.getElementById('resultImage').src = `./img/10_반려동물추천/${filteredData[0].name}.jpg`;
+                document.getElementById('resultText').innerText = filteredData[0].explanation;
+                return;
+            }
+
+
+            //보러가기를 클릭해했을때
+            if (target.id == 'review-animal') {
+                if (type == 'dog') {
+                    event.preventDefault(); //기본 동작 취소
+                    window.location.href = "./강아지,고양이 상세/03_강아지.html";
+                    return;
+                } else if (type == 'cat') {
+                    event.preventDefault(); //기본 동작 취소
+                    window.location.href = "./강아지,고양이 상세/01_고양이.html";
+                    return;
+                }
+            }
+
+            if (target.id == 'replay') {
+                event.preventDefault(); //기본 동작 취소
+                window.location.href = "./10_반려동물추천.html";
+                return;
+            }
+
+            if(target.id == 'homeMove'){
+                window.location.href = "./01_메인페이지.html";
+            }
+
+
+        });
+
+        function barNone() {
+            document.getElementById('fixed-bar').style.display = 'none';
+            document.getElementById('full-bar').style.display = 'none';
+        }
+
+        function slideSpeed(speed) {
+            document.querySelector('.container').style.transform += 'translate(-100vw)';
+            document.querySelector('.container').style.transition = `${speed}s`;
+        }
+
+
+        let barWidth = 50;
+
+        //버튼 클릭하면 오른쪽으로 넘어가는 기능
+        document.querySelectorAll('.btn').forEach(button => {
+            button.addEventListener('click', () => {
+                slideSpeed(1.5);
+                // document.querySelector('.container').style.transform += 'translate(-100vw)';
+                // document.querySelector('.container').style.transition = '1.5s';
+                document.getElementById('fixed-bar').style.transition = `1s`;
+                document.getElementById('fixed-bar').style.width = `${barWidth}px`;
+                barWidth += 70;
+            });
+        });
+
+    </script>
+</body>
+
+</html>

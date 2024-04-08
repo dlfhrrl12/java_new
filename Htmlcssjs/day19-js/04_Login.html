@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: cornflowerblue;
+        }
+        .container{
+            width: 300px;
+            background-color: aquamarine;
+            /* 화면의 정중앙에 위치 */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            border-radius: 10px;
+            padding: 20px 30px;
+        }
+        .text-field, .btn{
+            width: 100%;
+            padding: 10px;
+            font-size: 15px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+        }
+        .btn{
+            background-color: rgb(7, 115, 79);
+            color: white;
+            font-weight: 700;
+            cursor: pointer;
+        }
+        .link{
+            margin-top: 30px;
+        }
+        .link>a{
+            color: rgb(66, 66, 66);
+            text-decoration: none;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="">
+            <input type="text" class="text-field" name="id" placeholder="아이디">
+            <input type="password" class="text-field" name="pw" placeholder="비밀번호" id="pw">
+            <input type="submit" class="btn" value="로그인" disabled>
+        </form>
+        <p id="result"></p>
+        <div class="link">
+            <a href="">비밀번호를 잊어버리셨나요</a>
+        </div>
+    </div>
+
+    <script>
+        //event 'input'
+        //^(?=.*[A-Za-z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*].{8,}$
+        //disable = true => 비활성화
+        //disable = false => 활성화
+        const input = document.querySelectorAll('.text-field');
+        const btn = document.querySelector('.btn');
+        console.log(input);
+        console.log(btn);
+        input[0].addEventListener('input',()=>{
+            //id에 관한 규칙 : 8글자 이상
+            if(input[1].value.length > 7){
+                if(input[0].value.length > 7){
+                    btn.style.setProperty('background-color', 'rgb(7, 115, 79)');
+                    btn.disabled = false;
+                }
+            }else{
+                btn.style.setProperty('background-color', 'rgb(161, 161, 161)');
+                btn.disabled = true;
+            }
+            
+        });
+        input[1].addEventListener('input',()=>{
+            //비밀번호 체크
+            //문자, 숫자, 특수문자 포함 8글자 이상
+            let reg = new RegExp(/^(?=.*[A-Za-z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*].{8,}$/);
+            console.log(input[1].value, reg.test(input[1].value));
+            let uid = input[0].value;
+            let upw = input[1].value;
+            if(uid.length > 7){
+                if(reg.test(upw)){
+                    btn.style.setProperty('background-color', 'rgb(7, 115, 79)');
+                    btn.disabled = false;
+                }else{
+                    btn.style.setProperty('background-color', 'rgb(161, 161, 161)');
+                    btn.disabled = true;
+                }
+            }else{
+                btn.style.setProperty('background-color', 'rgb(161, 161, 161)');
+                btn.disabled = true;
+            }
+            
+        });
+        // document.getElementById('pw').addEventListener('input',(e)=>{
+        //     // console.log(e.target.value);
+        //     if(/^(?=.*[A-Za-z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*].{8,}$/.test(e.target.value)){
+        //         return true;
+        //         console.log('O');
+        //     }else{
+        //         return false;
+        //         console.log('X');
+        //     }
+        // });
+    </script>
+</body>
+</html>

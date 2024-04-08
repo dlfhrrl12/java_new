@@ -1,0 +1,52 @@
+.linbox{
+    width: 100%;
+    height: 200px;
+    background-color: antiquewhite;
+    position: absolute;
+}
+
+.loutbox1{
+    width: 140px;
+    height: 140px;
+    background-color: aquamarine;
+    position: relative;
+    margin-top: 30px;
+    margin-left: 20px;
+    float: left;
+}
+.loutbox2{
+    width: 140px;
+    height: 140px;
+    position: relative;
+    background-color: blueviolet;
+    margin-top: 30px;
+    margin-left: 35%;
+    float: left;
+}
+.loutbox3{
+    width: 140px;
+    height: 140px;
+    position: relative;
+    background-color: red;
+    margin-top: 30px;
+    margin-left: 40%;
+    float: left;
+}
+
+.linbox::after{
+    content: "";
+    clear: both;
+    display: block;
+}
+.einbox{
+    width: 500px;
+    height: 500px;
+    background-color: blueviolet;
+    position: absolute;
+    margin-top: 200px;
+}
+.eoutbox{
+    width: 100px;
+    height: 100px;
+    background-color: antiquewhite;
+}

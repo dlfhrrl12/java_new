@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/회원가입타이틀(공용).css">
+    <style>
+
+        /* .sign-up-title{
+            width: 300px;
+            height: 200px;
+            display: block;
+            border: 1px solid black;
+            margin : 30px auto;
+        }
+        .sign-up-title>img{
+            width: 300px;
+            height: 200px;
+            margin: 0 auto;
+        } */
+
+        .signUp-info {
+            width: 400px;
+            margin: 0 auto;
+            height: 100px;
+        }
+
+        .signUp-info>h1 {
+            margin: 50px 0 0;
+            font-size: 40px;
+            font-weight: 700;
+        }
+
+        .signUp-info>p {
+            margin: 50px 0 30px;
+            font-size: 20px;
+            font-weight: 680;
+            color: rgb(104, 101, 101);
+        }
+
+        /* 로그인 박스 */
+
+        .login-box {
+            margin: auto;
+            margin-top: 50px;
+            width: 400px;
+            height: 400px;
+            border-top: 1px double gray;
+            /* background-color: #3b5998; */
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        .login-box>.box {
+            height: 20px;
+            /* border: 1px solid black; */
+            margin: 20px 0px;
+            padding: 20px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .login-box>.box>img {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            top: 3px;
+            left: 5px;
+        }
+
+        .login-box>.box {
+            color: whitesmoke;
+            font-size: 20px;
+            font-weight: 700;
+            padding: 20px;
+        }
+
+        .login-box>.kakaoLogin {
+            background-color: #F7E600;
+            color: #6c3c0c;
+        }
+
+        .login-box>.twitterLogin {
+            background-color: #00acee;
+        }
+
+        .login-box>.facebookLogin {
+            background-color: #3b5998;
+        }
+        .login-box>.box>a:hover {
+            color: rgb(180, 169, 169);
+        }
+        
+        .login-box>.box:hover{
+            color: rgb(180, 169, 169);
+            font-size: 20px;
+            font-weight: 700;
+            transition: 0.4s;
+        }
+        
+        .login-box>.other-box,
+        .login-box>.other-box>a {
+            color: gray;
+            font-size: 20px;
+            font-weight: 700;
+        }
+        
+        .login-box>.site-sign-up {
+            border: 2px solid gray;
+        }
+        
+        .login-box .and {
+            color: black;
+            display: flex;
+            justify-content: center;
+            border-top: 1px solid gray;
+            border-bottom: 1px solid gray;
+            
+        }
+        .login-box>.and:hover{
+            color: black;
+        }
+        
+        </style>
+</head>
+
+<body>
+    <a href="./01_메인페이지.html" class="sign-up-title">
+        <img src="./img/00_공용/이게멍냥.jpg" alt="">
+    </a>
+    <div class="signUp-info">
+        <h1>회원가입하기</h1>
+        <p>소셜 로그인 및 이메일로 가입할 수 있어요</p>
+    </div>
+    <div class="login-box">
+        <a href="https://www.facebook.com/?locale=ko_KR" class="box facebookLogin">
+            Facebook으로 시작하기
+            <img src="./img/02_회원가입_01/facebookIcon.png" alt="">
+        </a>
+        <a href="https://www.kakaocorp.com/page/service/service/KakaoTalk" class="box kakaoLogin">
+            카카오로 시작하기
+            <img src="./img/02_회원가입_01/kakaotalkIcon.png" alt="">
+        </a>
+        <a href="https://twitter.com/?lang=ko" class="box twitterLogin">
+            Twitter로 시작하기
+            <img src="./img/02_회원가입_01/twitter.png" alt="">
+        </a>
+        <div class="box other-box and">
+            또는
+        </div>
+        <a href="./02_회원가입_02.html" class="box other-box site-sign-up">
+            ID/PW 회원가입
+        </a>
+    </div>
+    <script src="./js/회원가입타이틀(공용).js"></script>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 300vw;
+        }
+        .inner{
+            width: 100vw;
+            float: left;
+        }
+        img{
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+    
+    <div style="overflow: hidden;">
+
+        <div class="container">
+            <div class="inner"> 
+                <img src="./img/02_회원가입_01/facebookIcon.png" alt="">
+                <button class="animal-like">강아지를 좋아하나요</button>
+                <button class="animal-like">고양이를 좋아하나요</button>
+            </div>
+            <div class="inner"> 
+                <img src="./img/02_회원가입_01/instargramIcon.png" alt="">
+                <button class="animal-like">집에있는것을 좋아하나요</button>
+                <button class="animal-like">밖에 나가는것을 좋아하나요</button>
+            </div>
+            <div class="inner"> 
+                <img src="./img/08_혜택/1.할인.jpg" alt="">
+                <button class="animal-like">선택</button>
+                <button class="animal-like">선택</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script>
+    document.querySelectorAll('.animal-like').forEach(button => {
+        button.addEventListener('click', () => {
+            document.querySelector('.container').style.transform += 'translate(-100vw)';
+        });
+    });
+    </script>
+</body>
+</html>

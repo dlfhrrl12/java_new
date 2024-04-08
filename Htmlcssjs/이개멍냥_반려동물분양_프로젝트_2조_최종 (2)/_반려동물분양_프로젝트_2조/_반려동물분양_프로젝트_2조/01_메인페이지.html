@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/공용.css">
+    <link rel="stylesheet" href="./css/메인.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <a href="https://www.kakaocorp.com/page/service/service/KakaoTalk" id="kakao-fixed" class="linkFiexd"><img src="./img/00_공용/kakaotalkFixed.png" alt="">
+        <p>카톡상담</p>
+    </a>
+    <a href="https://support.google.com/?hl=ko" id="customer-fixed" class="linkFiexd"><img src="./img/00_공용/고객상담Fixed.png" alt="">
+        <p>고객센터</p>
+    </a>
+    <a href="#top" id="top-fixed"><img src="./img/00_공용/TopButton.png" alt=""></a>
+
+    <header>
+        <div class="inner" id="#top">
+            <div class="mainIcon">
+                <div>
+                    <a href="./01_메인페이지.html"><img id="mainLogoImg" src="./img/00_공용/이게멍냥.jpg" alt=""></a>
+                </div>
+                <div class="login">
+                    <ul>
+                        <li><a href="" class="mypage">마이페이지</a></li>
+                        <li><a onclick="openPopup()" class="login-popup">로그인</a></li>
+                        <li><a href="./02_회원가입_01.html" id="sign-up-popup">회원가입</a></li>
+                    </ul>
+                </div>
+                <a href="./01_메인페이지.html" class="title" id="public-title"><img src="./img/00_공용/로고이미지.PNG" alt=""></a>
+            </div>
+        </div>
+    </header>
+    <div class="nav">
+        <ul>
+            <li><a href="./강아지,고양이 상세/03_강아지.html" id="public-dog">강아지</a></li>
+            <li><a href="./강아지,고양이 상세/01_고양이.html" id="public-cat">고양이</a></li>
+            <li><a href="./08_혜택,제휴.html" id="public-benefits">혜택</a></li>
+            <li><a href="./09_오시는길.html" id="public-direction">오시는 길</a></li>
+            <li><a href="./06_분양후기.html" id="public-review">입양 후기</a></li>
+            <li><a href="./10_반려동물추천.html" id="public-suggestion">반려동물 추천</a></li>
+            <li><a href="./07_문의게시판.html" id="public-inquiry">문의 사항</a></li>
+        </ul>
+    </div>
+
+    <div class="con con1">
+        <div class="inner">
+            <img src="./img/01_메인페이지/slide01.png" />
+            <img src="./img/01_메인페이지/slide02.png" />
+            <img src="./img/01_메인페이지/slide03.png" />
+            <button id="prev"><img src="./img/01_메인페이지/좌.png" alt=""></button>
+            <button id="next"><img src="./img/01_메인페이지/우.png" alt=""></button>
+        </div>
+    </div>
+    <div class="con con2">
+        <div class="con2title">멍 냥 이 들</div>
+        <div id="randomImageContainer"></div>
+        <div class="buttonBox">
+            <button id="loadMoreButton">More</button>
+        </div>
+    </div>
+    <div class="con con3">
+        <div class="con3title">후 기 보 기</div>
+        <div class="inner">
+            <ul class="list">
+                <li class="item">
+                    <a class="link" href="./06_분양후기페이지/01_강아지리뷰1.html">
+                        <img class="review-image" src="./img/01_메인페이지/분양사진/강아지리뷰1.jpg" alt="첫 번째 별나비" />
+                        <div>
+                            <h3>장난꾸러기인듯 사랑스러운 우리 막내 로띠</h3>
+                            <p>안녕하세요
+                                안아보고 빗장이 풀려버린 포메를 입양하게 되었어요.</p>
+                            <p>작은 아들램이 몇년전부터
+                                반려견을 키우..</p>
+                            <span>+ 더보기</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="item">
+                    <a class="link" href="./06_분양후기페이지/02_강아지리뷰2.html">
+                        <img class="review-image" src="./img/01_메인페이지/분양사진/강아지리뷰2.jpg" alt="두 번째 별나비" />
+                        <div>
+                            <h3>세이블 포메 분양 후기</h3>
+                            <p>미루고 미루던 강아지 분양에 너느 날 더 이상</p>
+                            <p>은 안되겠다 싶은 날에 친구가 추천...</p>
+                            <span>+ 더보기</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="item">
+                    <a class="link" href="./06_분양후기페이지/03_고양이리뷰1.html">
+                        <img class="review-image" src="./img/01_메인페이지/분양사진/고양이리뷰1.jpg" alt="세 번째 별나비" />
+                        <div>
+                            <h3>초보집사 먼치킨 고양이 키우기!!1</h3>
+                            <p>안녕하세요.
+                                회사지인들의 여러 반려동물을 만나보면서
+                                너무나 사랑스럽던 그 모습에</p>
+                            <p>저 역시
+                                처음으로 고양이를 키우게 되었습니다ㅎ
+                                입양한지 일주일되었지만 되게 활발하...</p>
+                            <span>+ 더보기</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="item">
+                    <a class="link" href="./06_분양후기페이지/04_강아지리뷰3.html">
+                        <img class="review-image" src="./img/01_메인페이지/분양사진/강아지리뷰3.jpg" alt="네 번째 별나비" />
+                        <div>
+                            <h3>사랑스러운 포메 뭉치 입양 2달쯤~</h3>
+                            <p>3월 19일 사랑스럽고 소중한 아가 뭉치를 입양했어요.. 많은 망설임과 고민 끝에</p>
+                            <p>입양을 하게되었고 친절하시고 상세한 상담을 해주신 수원 미니펫에서 입양을 결정하...</p>
+                            <span>+ 더보기</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="item">
+                    <a class="link" href="./06_분양후기페이지/05_강아지리뷰4.html">
+                        <img class="review-image" src="./img/01_메인페이지/분양사진/강아지리뷰4.jpg" alt="다섯 번째 별나비" />
+                        <div>
+                            <h3> 말티푸 모카</h3>
+                            <p>안녕하세요 미니펫에서 12월 26일날 말티푸 입양한 모카 엄마입니다.
+                                미니펫에서 입양 할 시 동물 등록도</p>
+                            <p>함께 해주시고 멤버십 가입 비용 한 번만 내면
+                                강아지 5차 접종까지 무료이고 평생 진료비 최대 20% 할인까지...</p>
+                            <span>+ 더보기</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="item">
+                    <a class="link" href="./06_분양후기페이지/06_고양이리뷰2.html">
+                        <img class="review-image" src="./img/01_메인페이지/분양사진/고양이리뷰2.jpg" alt="여섯 번째 별나비" />
+                        <div>
+                            <h3>우리집의 대왕귀염둥이 에르를 소개합니다!!^-^</h3>
+                            <p>지난 5월 21일에 정말 운명처럼!!!
+                                만나게 되어 우리 가족이 된 에르입니다~!!</p>
+                            <p>지금 삼개월 동안 우리집에 잘 적응하며
+                                캣초딩을 지나... 캣춘기가 되어가는 듯 하지만~~~
+
+                                사람을 워낙 좋아해서 항상 사람 주변을 맴돌...</p>
+                            <span>+ 더보기</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="item">
+                    <a class="link" href="./06_분양후기페이지/07_강아지리뷰5.html">
+                        <img class="review-image" src="./img/01_메인페이지/분양사진/강아지리뷰5.jpg" alt="여섯 번째 별나비" />
+                        <div>
+                            <h3>개린이 콩닥이랑 첫만남, 그리고 일상</h3>
+                            <p>강아지를 엄청!! 많이!! 좋아하는데
+                                엄마가 반대해서 키우지는 못하고
+                                애견카페를 전전하면서 대리만족을 했었다.
+                                그러던중 친구들이랑 애견카페를 또 갔다오는길에</p>
+                            <p>미니펫이 보여서 구경하러 들어갔는데
+                                개월령이 좀 된거 같은 비숑을 만났...</p>
+                            <span>+ 더보기</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="item">
+                    <a class="link" href="./06_분양후기페이지/08_고양이리뷰3.html">
+                        <img class="review-image" src="./img/01_메인페이지/분양사진/고양이리뷰3.jpg" alt="여섯 번째 별나비" />
+                        <div>
+                            <h3>12월11일 입양한 먼치킨 아기 냥이입니다.</h3>
+                            <p>처음에는 나오지두 않고 숨어만있더니 이제는 온집안을 활보하며 다니네요.</p>
+                            <p>건강하고 이뿌게 잘 컷으...</p>
+                            <span>+ 더보기</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="item">
+                    <a class="link" href="./06_분양후기페이지/09_강아지리뷰6.html">
+                        <img class="review-image" src="./img/01_메인페이지/분양사진/강아지리뷰6.jpg" alt="여섯 번째 별나비" />
+                        <div>
+                            <h3>소중한 가족 만나게 해주셔서 감사합니다.</h3>
+                            <p>우리 아이가 가족이 된 지 벌써 3주째네요.
+                                9월에 10년 키운 고양이를 하늘나라 보내고.. 강아지는 처음입니다.
+                                처음이라 강아지에 대해 무지한 상태였는데</p>
+                            <p>정보 많이 주셔서 다행히도 잘 크고 있어요.
+                                소중한 가족 만나게 해주셔서 너무 감사드...</p>
+                            <span>+ 더보기</span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <footer>
+        <div class="inner">
+            <div class="up">
+                <ul>
+                    <li><a href="https://sw.ezenac.co.kr/ezen/campus/campus_info.asp">회사소개</a></li>
+                    <li><a href="https://sw.ezenac.co.kr/ezen/etc/terms_conditions.asp">서비스이용약관</a></li>
+                    <li><a href="https://sw.ezenac.co.kr/ezen/etc/privacy_policy.asp" id="gain">개인정보 처리방침</a></li>
+                </ul>
+            </div>
+            <div class="down">
+                <p>이개멍냥 Company</p>
+                <p>대표자: 김이젠</p>
+                <p>인천광역시 남동구 인주대로 593 엔타스빌딩 12층</p>
+                <p>영업시간 : 09:00-21:00 연중무휴</p>
+                <p>T.02-6956-2408 &nbsp; F.02-6951-2418 &nbsp; Copyright by EZEN. All rights reserved</p>
+            </div>
+        </div>
+        </div>
+    </footer>
+
+
+
+
+    <!-- 로그인 팝업 페이지 -->
+
+    <div id="loginPopup" class="popup">
+        <span class="close" onclick="closePopup()">&times;</span>
+        <h2 class="login-logo">로그인</h2>
+        <form id="loginForm">
+            <input type="text" class="input-box" id="username" name="username" placeholder=" 아이디">
+            <input type="password" class="input-box" id="password" name="password" placeholder=" 비밀번호">
+            <button type="button" class="loginBtn" onclick="login()" disabled>로그인</button>
+            <a href="./02_회원가입_01.html" class="other-info">회원가입</a>
+            <a href="" class="other-info">아이디· 비밀번호 찾기</a>
+        </form>
+    </div>
+
+    <div id="overlay" class="overlay"></div>
+
+    <script src="./js/공용.js"></script>
+    <script src="./js/메인.js"></script>
+    <script>
+        console.log(sessionStorage.getItem('userCount'));
+        console.log(sessionStorage.getItem('id0'));
+        console.log(sessionStorage.getItem('pw0'));
+    </script>
+</body>
+
+</html>

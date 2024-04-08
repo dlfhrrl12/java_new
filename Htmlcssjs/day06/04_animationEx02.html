@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes move{
+            0%{
+                bottom: 0%;
+            }
+            35%{
+               bottom: 10%;
+            }
+            50%{
+                bottom: 0%;
+            }
+            75%{
+                bottom: 25%;
+            }
+            100%{ 
+                bottom: 0%;
+            }
+        }
+        .hi{
+            font-size: 20px;
+            left: 10px;
+            bottom: 0px;
+
+            position: absolute;
+            animation-name: move;
+           animation-duration: 1s; 
+           animation-iteration-count: infinite;
+        }
+    </style>
+</head>
+<body>
+    <span class="hi">hihihi</span>
+</body>
+</html>

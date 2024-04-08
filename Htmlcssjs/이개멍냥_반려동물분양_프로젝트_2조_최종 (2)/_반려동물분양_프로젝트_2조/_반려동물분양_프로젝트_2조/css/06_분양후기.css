@@ -1,0 +1,164 @@
+
+@font-face {
+    font-family: Gaegu;
+    src: url(../font/Gaegu-Regular.ttf);
+}
+
+body{        
+    font-family: Gaegu;
+    }
+.top{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+.top :nth-of-type(1){
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+.top :nth-of-type(2){
+    font-size: 50px;
+}
+/* 상단 후기이벤트 */
+
+/* .mid>.ho{
+    display: flex;
+    justify-content: left;
+} */
+
+.mid>a{
+    top: 0;
+    position: sticky;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    z-index: 1;
+}
+.mid>a>span{
+    font-size: 30px;
+    color: red;
+    z-index: 3;
+}
+
+
+/* 그림 */
+.pic{
+    /* 그림사이즈 230 마진 20 */
+    /* 230*3 + 20*6 = 810 */
+    width: 1200px;
+    margin: 0 auto;
+    /* border: 1px solid black; */
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.pic>a{
+    margin: 0 50px;
+}
+.pic>a>div>img{
+    width: 300px;
+    height: 250px;
+    z-index: 0;
+}
+.pic ul{
+    margin: 20px 0 50px 0;
+}
+.pic ul>li{ /* 그림 내용설명*/
+    font-size: 30px;
+    margin: 10px;
+    color: black;
+}
+
+.pic>a{
+    position: relative;
+}
+.pic .text{
+    position: absolute;
+    top: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: red;
+    /* 화면에서 사라지게 */
+    display: none;
+}
+.pic>a{
+    position: relative;
+    height: 450px;
+    
+}
+.pic .text{
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: red;
+    /* 화면에서 사라지게 */
+    display: none;
+}
+.pic>a>div>img:hover ~.text{
+    /* hover의 대상이 다른 객체일 경우 ~ */
+    display: block;
+}
+.pic>a>div>img:hover{
+    transform: scale(1.1);
+
+}
+.pic>a>div>img{
+    transition: transform 0.3s;
+    border-radius: 20px;
+}
+.pic>a>div{
+    width: 300px;
+    height: 230px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+.pic>a h3{
+    font-weight: 700;
+}
+.pic>a p{
+    color: gray;
+}
+.pic>a span{
+    color: brown;
+}
+.bw{
+    margin-top: 100px;
+    margin-bottom: 30px;
+}
+.btn{
+    font-size: 20px;
+}
+
+.btn>button{
+    background-color: white;
+    font-size: 20px;
+    border-radius: 5px;
+    border-color: gray;
+    margin-left: 10px;
+}
+.bw>.btn{
+    display: flex;
+    justify-content: center;
+}
+.btn>button:hover{
+   border: 2px solid palevioletred;
+  
+}
+
+.write{
+    display: flex;
+    justify-content: right;
+}
+.write{
+    height: 30px;
+    width: 150px;
+    background-color: palevioletred;  
+}
+.write>a{
+    font-size: 40px;
+}
+a{
+    cursor: pointer;
+}

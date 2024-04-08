@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            width: 300px;
+            height: 300px;
+            font-size: 20px;
+            font-weight: 700;
+            align-content: end;
+        }
+        button>img{
+            width: 230px;
+            height: 230px;
+            align-content: center;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- 가위 바위 보 게임 -->
+    <!-- 
+        버튼:가위 = 1, 버튼:바위 = 2, 버튼:보 = 3
+        com= random 랜덤으로 1~3의 수를 발생해서 승부를 한다
+        id="result"에 값을 출력한다.
+     -->
+    <button type="button" onclick="scissors()"><img src="../image/scissors.png" alt="">가위(1)</button>
+    <button type="button" onclick="rok()"><img src="../image/rok.png" alt="">바위(2)</button>
+    <button type="button" onclick="paper()"><img src="../image/paper.png" alt="">보(3)</button>
+    <h3 id="result">
+        <!-- 출력 -->
+        <!-- 
+            예시)player : 가위 / com : 바위 player 가 졋습니다.
+            현재 전적
+            승:0 / 무:0 /패:1
+            승률 : (승/(10-무))*100 ((win/(10-draw))*100).toFixed(2)
+         -->
+    </h3>
+    <script>
+        let win = 0;
+        let draw = 0;
+        let lose = 0;
+        let player = 0;
+        let com = 0;
+        
+        function ran(){
+            return Math.floor(Math.random()*3)+1;
+        }
+
+        function scissors(){
+            player=1;
+            com = ran();
+
+            switch(com){
+                case 1:
+                    draw++;
+                    break;
+                case 2:
+                   lose++;
+                    break;
+                case 3:
+                   win++;
+                    break;
+                    default: break;
+            }
+            upresult();
+            
+        }
+
+        function rok(){
+            player=2;
+            com = ran();
+
+            switch(com){
+                case 1:
+                    win++;
+                    break;
+                case 2:
+                    draw++;
+                    break;
+                case 3:
+                    lose++;
+                    break;
+                    default: break;
+            }
+            upresult();
+        }
+
+        function paper(){
+            player=3;
+            com = ran();
+
+            switch(com){
+                case 1:
+                    lose++;
+                    break;
+                case 2:
+                    win++;
+                case 3:
+                    draw++;
+                    break;
+                    default: break;
+            }
+            upresult();
+        }
+
+        function upresult(){
+            let totalgame = win + draw + lose;
+            let winrate = ((win/(10-draw))*100).toFixed(2);
+            let resultprint = `player:${playerString(player)} | com:${playerString(com)} <br> ${outcomeString(player, com)}입니다 <br> 현재 전적 <br> 승: ${win} / 무: ${draw} / 패: ${lose} <br> 승률: ${winrate}%`;
+            document.getElementById('result').innerHTML=resultprint
+        }
+
+        function playerString(player){
+            switch(player){
+                case 1:
+                    return '가위';
+                    break;
+                case 2:
+                    return '바위';
+                    break;
+                case 3:
+                    return '보';
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        function outcomeString(player, com){
+            if(player==com){
+                return '무승부';
+            }else if((player==1 && com==3)||(player==2 && com==1)||(player==3 && com==2)){
+                return '승리';
+            }else{
+                return '패배';
+            }
+        }
+
+    </script>
+</body>
+</html>

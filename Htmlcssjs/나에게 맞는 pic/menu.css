@@ -1,0 +1,64 @@
+.inner-box>.menu{
+    list-style: none;
+    width: 250px;
+}
+.inner-box>.menu>li{
+    margin: 8px 0;
+    position: relative;
+    background-color: #2b2b2b;
+    border-radius: 2px;
+    overflow: hidden;
+    font-size: 20px;
+    color: white;
+}
+
+.inner-box>.menu li::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 5px;
+    background-color: rgb(246, 66, 66);
+    transition: 0.3s all ease-in-out;
+}
+
+
+
+.inner-box>.menu li:hover::before{
+    border-radius: 0 50px 50px 0;
+    width: 110%;
+}
+
+.inner-box>.menu>li>button{
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    position: relative;
+    z-index: 1;
+}
+.inner-box>.dog>li>button{
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    position: relative;
+    z-index: 1;
+}
+.inner-box>.menu>.item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+    opacity: 0;
+    transition: 0.5s ease-in;
+}
+.inner-box>.menu>.item.active{
+    margin-top: 0;
+    opacity: 1;
+}

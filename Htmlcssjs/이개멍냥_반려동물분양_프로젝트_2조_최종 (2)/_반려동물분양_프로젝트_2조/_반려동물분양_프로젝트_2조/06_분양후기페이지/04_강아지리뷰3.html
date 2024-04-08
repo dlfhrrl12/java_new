@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/후기페이지_01_강아지리뷰1.css">
+    <link rel="stylesheet" href="../css/공용.css">
+</head>
+
+<body>
+
+    <a href="https://www.kakaocorp.com/page/service/service/KakaoTalk" id="kakao-fixed" class="linkFiexd"><img src="../img/00_공용/kakaotalkFixed.png" alt="">
+        <p>카톡상담</p>
+    </a>
+    <a href="https://support.google.com/?hl=ko" id="customer-fixed" class="linkFiexd"><img src="../img/00_공용/고객상담Fixed.png" alt="">
+        <p>고객센터</p>
+    </a>
+    <a href="#top" id="top-fixed"><img src="../img/00_공용/TopButton.png" alt=""></a>
+
+    <header>
+        <div class="inner" id="#top">
+            <div class="mainIcon">
+                <div>
+                    <a href="../01_메인페이지.html"><img id="mainLogoImg" src="../img/00_공용/이게멍냥.jpg" alt=""></a>
+                </div>
+                <div class="login">
+                    <ul>
+                        <li><a href="" class="mypage">마이페이지</a></li>
+                        <li><a onclick="openPopup()" class="login-popup">로그인</a></li>
+                        <li><a href="../02_회원가입_01.html" id="sign-up-popup">회원가입</a></li>
+                    </ul>
+                </div>
+                <a href="../01_메인페이지.html" class="title" id="public-title"><img src="../img/00_공용/로고이미지.PNG" alt=""></a>
+            </div>
+        </div>
+    </header>
+    <div class="nav">
+        <ul>
+            <li><a href="../강아지,고양이 상세/03_강아지.html" id="public-dog">강아지</a></li>
+            <li><a href="../강아지,고양이 상세/01_고양이.html" id="public-cat">고양이</a></li>
+            <li><a href="../08_혜택,제휴.html" id="public-benefits">혜택</a></li>
+            <li><a href="../09_오시는길.html" id="public-direction">오시는 길</a></li>
+            <li><a href="../06_분양후기.html" id="public-review">입양 후기</a></li>
+            <li><a href="../10_반려동물추천.html" id="public-suggestion">반려동물 추천</a></li>
+            <li><a href="../07_문의게시판.html" id="public-inquiry">문의 사항</a></li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <div class="top"> <!-- 실제분양후기  -->
+            <p>실 제 분 양 후 기</p>
+            <p>CUTE PET REVIEW</p>
+        </div>
+        <div class="mid">
+            <a href="../06_후기작성.html" class="ho"><span>->>후기작성<<-</span></a>
+            <a href="../06_후기작성.html"><img class="event" src="../img/06_분양후기/리뷰반려동물사진.jpg" alt=""></a>
+        </div>
+
+
+        <div class="review-title">
+            <p>사랑스러운 포메 뭉치 입양 2달쯤~</p>
+            <p>서*연 2023.05.15</p>
+        </div>
+
+        <div class="text">
+            <span>
+                <br>
+                3월 19일 사랑스럽고 소중한 아가 뭉치를 입양했어요. <br>
+
+                많은 망설임과 고민 끝에 입양을 하게 되었고 친절하시고 상세한 상담을 해주신 수원 미니펫에서 입양을 결정하게 되었구요..<br>
+
+                한번보고 너무 이쁘고 사랑스러워 집에 가서도 아른거렸던 아가(뭉치)를 입양하게 되었습니다.<br>
+
+                초기에는 감기 증상이 있었는데..제가 심한 걱정을 해도 다 받아주시고 세심히 설명해주신 수원 미니펫에 감사드려요.<br>
+
+                지금은 너무나도 건강하고 활발하고 애교쟁이로 잘 크고 있습니다.<br>
+
+                이제 종합백신 5차도 다 맞고 무럭무럭 잘 크고 있어요. <br>
+
+                믿고 분양받을 수 있게 응대해주셔서 너무 감사드려요.<br>
+
+                덕분에 사랑스럽고 너무나 이쁜 아가와 평생 함께 할 수 있게 되었습니다.<br>
+
+
+
+                <br>
+                <br>
+            </span>
+            <img src="후기페이지img/04_강아지_1.jpg" alt="">
+            <img src="후기페이지img/04_강아지_2.jpg" alt="">
+            <img src="후기페이지img/04_강아지_3.jpg" alt="">
+            <img src="후기페이지img/04_강아지_4.jpg" alt="">
+            <img src="후기페이지img/04_강아지_5.jpg" alt="">
+            <img src="후기페이지img/04_강아지_6.jpg" alt="">
+
+
+        </div>
+        <a href="../06_분양후기.html">
+            <div class="list">
+                <button type="button">
+                    목록
+                </button>
+            </div>
+        </a>
+
+
+        <div id="wapper">
+            <form action="">
+                <h2>댓글창</h2>
+                <span id="cnt"></span>
+                <input type="text" id="item" >
+                <button type="button" id="add">추가</button>
+            </form>
+            <div>
+                <ul id="itemList"></ul>
+            </div>
+        </div>
+
+        <div class="next">
+            <div>
+                <a href="../06_분양후기페이지/03_고양이리뷰1.html"><span>▲ 이전글 : 초보집사 먼치킨 고양이 키우기 (김*아 2023.07.10)</span></a>
+                <hr>
+                <a href="../06_분양후기페이지/05_강아지리뷰4.html"><span>▼ 다음글 : 말티푸 모카 (김*영 2022.12.29)</span></a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="inner">
+            <div class="up">
+                <ul>
+                    <li><a href="https://sw.ezenac.co.kr/ezen/campus/campus_info.asp">회사소개</a></li>
+                    <li><a href="https://sw.ezenac.co.kr/ezen/etc/terms_conditions.asp">서비스이용약관</a></li>
+                    <li><a href="https://sw.ezenac.co.kr/ezen/etc/privacy_policy.asp" id="gain">개인정보 처리방침</a></li>
+                </ul>
+            </div>
+            <div class="down">
+                <p>이개멍냥 Company</p>
+                <p>대표자: 김이젠</p>
+                <p>인천광역시 남동구 인주대로 593 엔타스빌딩 12층</p>
+                <p>영업시간 : 09:00-21:00 연중무휴</p>
+                <p>T.02-6956-2408 &nbsp; F.02-6951-2418 &nbsp; Copyright by EZEN. All rights reserved</p>
+            </div>
+        </div>
+        </div>
+    </footer>
+
+
+
+
+    <!-- 로그인 팝업 페이지 -->
+
+    <div id="loginPopup" class="popup">
+        <span class="close" onclick="closePopup()">&times;</span>
+        <h2 class="login-logo">로그인</h2>
+        <form id="loginForm">
+            <input type="text" class="input-box" id="username" name="username" placeholder=" 아이디">
+            <input type="password" class="input-box" id="password" name="password" placeholder=" 비밀번호">
+            <button type="button" class="loginBtn" onclick="login()" disabled>로그인</button>
+            <a href="../02_회원가입_01.html" class="other-info">회원가입</a>
+            <a href="" class="other-info">아이디· 비밀번호 찾기</a>
+        </form>
+    </div>
+
+    <div id="overlay" class="overlay"></div>
+
+    <script src="../js/공용.js"></script>
+
+    <script>
+
+        // 추가하는 목록을 저장, 삭제한 목록을 제거
+        let itemList = [];
+
+        document.getElementById('add').addEventListener('click', addList);
+        let cnt = 0;
+
+        // 아이템 추가 : 입력받은 아이템을 배열에 추가
+        function addList() {
+            let item = document.getElementById('item');
+            console.log(item.value);
+            if (item.value !== '') {
+                itemList.push(item.value);
+                item.value = ''; // 추가 후 item 값을 비우기
+                item.focus(); // item에 focus 두기
+                // 추가 후 화면에 뿌리기
+                showList()
+                cnt++;
+            } else {
+                alert('댓글을 입력해주세요.');
+            }
+        }
+
+        //아이템을 화면에 뿌리기 : 배열에 있는 목록을 화면에 모두 뿌리기
+        document.getElementById('cnt').innerHTML = `댓글 수 : ${cnt}`;
+        function showList() {
+            let list = ''; // 뿌릴 텍스트 리스트
+            for (let i = 0; i < itemList.length; i++) {
+                list += `<li id="list${i}">${itemList[i]}<span class="close" id="${i}">x</span></li>`;
+            }
+            document.getElementById('itemList').innerHTML = `${list}`;
+            document.getElementById('cnt').innerHTML = `댓글 수 : ${cnt}`;
+        }
+
+        // item 삭제 : 배열에서 해당 아이템 제거
+        document.addEventListener('click', (e) => {
+            console.log(e.target.classList);
+            if (e.target.classList.contains('close')) {
+                //x 버튼을 클릭했다.
+                console.log('111');
+                let i = e.target.id;
+                console.log(i);
+                itemList.splice(i, 1);
+                cnt--;
+            }
+            // 삭제 후 리스트 뿌리기
+            showList();
+        });
+    </script>
+
+</body>
+
+</html>

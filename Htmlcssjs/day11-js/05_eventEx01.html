@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        성적확인
+        이름:홍길동 input
+        국어:80 input
+        영어:90 input
+        수학:80 input
+        성적계산 버튼
+        -----------------------
+        성적확인
+        이름:홍길동
+        국어:80
+        영어:90
+        수학:80
+        합계:00
+        평균:00 표시
+     -->
+
+
+
+     <form action="">
+
+            <h3>성적확인</h3>
+            이름 :<input type="text" id="name">
+            국어 :<input type="text" id="kor">
+            영어 :<input type="text" id="eng">
+            수학 :<input type="text" id="math">
+            <button type="button" onclick="report()">성적계산</button>
+
+        </form>
+        <ul id="li"></ul>
+
+     <script>
+        const li = document.getElementById('li');
+         function report(){
+            let name = document.getElementById('name').value;
+            let kor = document.getElementById('kor').value;
+            let eng = document.getElementById('eng').value;
+            let math = document.getElementById('math').value;
+            let korval = parseInt(kor);
+            let engval = parseInt(eng);
+            let mathval = parseInt(math);
+            let sum = korval + engval + mathval;
+            let avg = sum / 3;
+            li.innerHTML = `<li>name: ${name}</li>`;
+            li.innerHTML += `<li>kor: ${kor}</li>`;
+            li.innerHTML += `<li>eng: ${eng}</li>`;
+            li.innerHTML += `<li>math: ${math}</li>`;
+            li.innerHTML += `<li>${sum}</li>`;
+            li.innerHTML += `<li>${avg}</li>`;
+
+        }
+     </script>
+</body>
+</html>

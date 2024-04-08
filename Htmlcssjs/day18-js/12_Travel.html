@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+        body{
+    text-align: center;
+    }
+    h1{
+    border: 5px solid black;
+    width: 300px;
+    margin: 10px auto 30px;
+    }
+    ul{
+    padding: 0;
+    list-style: none;
+    }
+    ul>li{
+    border: 1px solid black;
+    display: inline;
+    margin: 10px 10px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 700;
+    background-color: aqua;
+    }
+
+    img{
+    width: 50%;
+    height: 400px;
+    }
+    </style>
+<body>
+    <h1>Travel</h1>
+
+    
+        <ul>
+            <li><a id="home" onclick="clickCity()">Home</a></li>
+            <li><a id="seoul" onclick="clickCity()">Seoul</a></li>
+            <li><a id="tokyo" onclick="clickCity()">Tokyo</a></li>
+            <li><a id="pari" onclick="clickCity()">Paris</a></li>
+        </ul>
+    
+    
+    <img src="../image/home.jpg" alt="home" id="cityImg">
+
+    <script>
+
+        function clickCity(e){
+            console.log(e);
+            let idVal = e.id;
+            document.getElementById('cityImg').src=`../image.${idVal}.jpg`
+        }
+
+        // document.addEventListener('click',(e)=>{
+        //     if(e.target.classList.contains('home')){
+        //         imgTag.src="../image/home.jpg";
+        //     }else if(e.target.classList.contains('seoul')){
+        //         imgTag.src="../image/seoul.jpg";
+        //     }else if(e.target.classList.contains('tokyo')){
+        //         imgTag.src="../image/tokyo.jpg";
+        //     }else{
+        //         imgTag.src="../image/pari.jpg";
+        //     }
+        // });
+    </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button type="button" id="btn1">li 한번에 추가</button>
+    <button type="button" id="btn2">li 하나씩 추가</button>
+    <button type="button" id="btn3">li 한번에 추가</button>
+    <button type="button" id="btn4">li 하나씩 추가</button>
+    <ul id="ul"></ul>
+    <hr>
+    <ol id="ol"></ol>
+    <hr>
+    <ul id="ul1"></ul>
+    <hr>
+    <ol id="ol1"></ol>
+    <hr>
+    <script>
+        const datas = ['HTML','CSS','JavaScript','SQL'];
+        let cnt = -1;
+        const ul1 = document.getElementById('ul1');
+        const ol1 = document.getElementById('ol1');
+        //createElement : element를 생성
+        //appendChild : 다른 엘리먼트를 자식으로 추가
+        document.getElementById('btn3').addEventListener('click',()=>{
+            datas.forEach((e)=>{
+                let li = document.createElement('li'); // <li></li>
+                li.innerText = e // <li>${e}</li>
+                ul1.appendChild(li); // ul의 자식으로 추가 ul.innerHTML = li
+            })    
+        });
+        let index = 0;
+        document.getElementById('btn4').addEventListener('click',()=>{
+            if(index < datas.length){
+                let li = document.createElement('li');
+                li.innerText = datas[index];
+                ol1.appendChild(li);
+                index++;
+            }
+        });
+
+        //한꺼번에 출력
+        document.getElementById('btn1').addEventListener('click',()=>{
+            let str='';
+            for(let i=0; i<datas.length; i++){
+                str += `<li>${datas[i]}</li>`;
+                console.log(str);
+            }
+            document.getElementById('ul').innerHTML=str;
+        });
+        //하나씩 출력
+        document.getElementById('btn2').addEventListener('click',()=>{
+            if(cnt>=datas.length){ //인덱스 길이가 크면 다시 처음부터 시작
+                cnt=0;
+            }
+            cnt++; //다음 인덱스로 이동
+            
+            document.getElementById('ol').innerHTML+=`<li>${datas[cnt]}</li>`;
+        });
+
+    </script>
+</body>
+</html>

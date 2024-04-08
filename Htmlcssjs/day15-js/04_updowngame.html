@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>UP DOWN GAME</h1>
+    <ol>
+        <li>랜덤 숫자만들기 버튼을 클릭하면 컴퓨터가 랜덤수 1~99 숫자 1개를 생성</li>
+        <li>숫자가 생성되면 '컴퓨터가 랜덤으로 숫자를 생성했습니다.' 문구 출력</li>
+        <li>input란에 1~99 중 숫자를 입력하고 맞추기 버튼을 클릭하면,</li>
+        <li>컴퓨터의 숫자보다 높은숫자면 down, 낮으면 up이라고 출력</li>
+        <li>숫자를 맞추면 '정답입니다.~~! 숫자는 (정답) 였습니다.' 출력</li>
+    </ol>
+    <button type="button" onclick="ran()">랜덤 숫자 생성 버튼</button>
+    <button type="button" id="re">다시시도</button>
+    <h3 id="h3"></h3>
+    <br>
+    <br>
+    <input type="number" id="num" max="99" min="1">
+    <button type="button" id="btn">정답!!</button>
+    <h3 id="result"></h3>
+    <script>
+        let random = 0;
+        let count = 0;
+        function ran(){
+            random = Math.floor(Math.random()*99)+1;
+            let h3 = document.getElementById('h3').innerHTML=`컴퓨터가 랜덤수(1~99)를 생성했습니다.`;
+            console.log(random);
+        }
+
+        document.getElementById('re').addEventListener('click',()=>{
+            window.location.reload(); // 새로고침
+        });
+
+        document.getElementById('btn').addEventListener('click',()=>{     
+                let num = document.getElementById('num').value;
+                count ++;
+
+                document.getElementById('result').innerHTML=checkNum(num);
+                
+        });
+        function checkNum(num){
+            if(random==0){
+                return `랜덤수를 생성해주세요`;
+            }
+
+            if(num > 1 && num < 100){
+                if(random == num){
+                    return `시도횟수${count}, 정답입니다. ${random}이였습니다.`;
+                }else if(random > num){
+                    return `시도횟수${count}, up`;
+                }else{
+                    return `시도횟수${count}, down`
+                }
+            }else{
+                return `1~99까지의 숫자만 입력 가능합니다.`
+            }
+
+            // if(num>random){
+            //     return `시도횟수 ${count} down.`;
+            // }else if(num<random){
+            //     return `시도횟수 ${count} up.`;
+            // }else{
+            //     return `시도횟수 ${count} 정답입니다~~! 숫자는 ${random}이였습니다.`;
+            // }
+                
+        }
+    </script>
+</body>
+</html>

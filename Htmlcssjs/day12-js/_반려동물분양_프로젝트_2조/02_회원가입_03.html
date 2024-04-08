@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/회원가입타이틀(공용).css">
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+    <style>
+        .join-membership {
+            width: 60%;
+            height: 1000px;
+            margin: 0 auto;
+            /* border: 1px solid black; */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            border-radius: 10px;
+            /* background-color: rgba(248, 195, 203, 0.568); */
+            background-color: rgba(128, 128, 128, 0.281);
+        }
+
+        .join-membership h1{
+            font-size: 40px;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .join-membership p {
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        .join-membership>.join-content>.long-length {
+            display: block;
+            width: 300px;
+            height: 35px;
+        }
+
+        .join-membership>.join-content>.agency-length {
+            width: 100px;
+            height: 35px;
+            outline: none;
+        }
+
+        .join-membership>.join-content>.phone-length {
+            width: 200px;
+            height: 30px;
+            outline: none;
+        }
+
+        .join-membership>.join-content>.email-length {
+            width: 165px;
+            height: 30px;
+            outline: none;
+            font-size: 17px;
+        }
+
+        .join-membership>.join-content>.email-adress-length {
+            width: 100px;
+            height: 35px;
+            outline: none;
+        }
+
+        .join-membership>.join-content>.birth {
+            width: 90px;
+            height: 35px;
+            outline: none;
+        }
+
+        .join-membership>.sign-up-box {
+            padding: 50px;
+        }
+
+        .join-membership>.sign-up-box>button {
+            font-weight: 700;
+            color: white;
+            width: 200px;
+            height: 70px;
+            font-size: 30px;
+            background-color: rgba(26, 24, 26, 0.521);
+            font-weight: 700;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: none;
+            cursor: pointer;
+
+        }
+    </style>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+
+        <a href="./01_메인페이지.html" class="sign-up-title">
+            <img src="./img/00_공용/이게멍냥.jpg" alt="">
+        </a>
+
+        <div class="join-membership">
+            <div class="siteInfo">
+                <h1>회원가입</h1>
+                <h3>가입하시고 신규 혜택 받아가세요</h3>
+            </div>
+            <div class="join-content">
+                <p>아이디 </p>
+                <input type="text" class="long-length idInput" id="idInput" placeholder="아이디 입력(6~20자)">
+                <span id="id-validId-print"></span>
+            </div>
+            <div class="join-content">
+                <p>비밀번호</p>
+                <input type="password" class="long-length pwInput" id="pwInput" placeholder="비밀번호">
+                <span id="pw-validPw-print"></span>
+            </div>
+            <div class="join-content">
+                <p>비밀번호 확인</p>
+                <input type="password" class="long-length pwCheckInput" placeholder="비밀번호 확인">
+                <span id="pwCheck-print"></span>
+            </div>
+            <div class="join-content">
+                <p>이름</p>
+                <input type="text" class="long-length koreaName" placeholder="이름을 입력해주세요">
+            </div>
+            <div class="join-content">
+                <p>전화번호</p>
+                <select name="" id="" class="agency-length">
+                    <option value="">통신사</option>
+                    <option value="">SKT</option>
+                    <option value="">KT</option>
+                    <option value="">LG U+</option>
+                    <option value="">알뜰폰</option>
+                </select>
+                <input type="text" class="phone-length phoneNumber" placeholder="휴대폰 번호 입력 &nbsp; &quot;-&quot;제외">
+            </div>
+            <div class="join-content">
+                <p>이메일 주소 (선택)</p>
+                <input type="text" class="email-length">&nbsp;@ &nbsp;
+                <select name="" id="" class="email-adress-length">
+                    <option value="">이메일</option>
+                    <option value="">naver.com</option>
+                    <option value="">google.com</option>
+                    <option value="">daum.net</option>
+                </select>
+            </div>
+            <div class="join-content">
+                <p>생년월일</p>
+                <select name="" id="year" class="birth">
+                    <option value=""></option>
+                </select>
+                &nbsp; <select name="" id="month" class="birth"></select>
+                &nbsp; <select name="" id="day" class="birth"></select>
+            </div>
+            <div class="sign-up-box">
+                <button id="sign-up-btn" disabled>회원가입</button>
+            </div>
+        </div>
+        <script src="./js/회원가입03.js"></script>
+        <script src="./js/회원가입타이틀(공용).js"></script>
+    </body>
+
+    </html>
+</body>
+
+</html>

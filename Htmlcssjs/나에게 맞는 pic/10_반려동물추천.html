@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./menu.css">
+
+    <style>
+        .img{
+            position: absolute;
+            background-image: url(./img/액자.jpg);
+            width: 500px;
+            height: 700px;
+            /* border: 1px solid black; */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 30px;
+            margin-left: 35%;
+            margin-bottom: 50px;
+        }
+        .container{
+            
+            width: 800vw;
+            height: 900px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        .inner-box{
+            /* border: 1px solid black; */
+            width: 100vw;
+            height: 900px;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding-bottom: 100px;
+        }
+        button{
+           border: none;
+           background-color: transparent;
+           width: 100%;
+           height: 100%;
+           cursor: pointer;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div style="overflow: hidden;">
+        <div class="img"></div>
+            <div class="container">
+                <div class="inner-box">
+                    <!-- <h1>시작하기</h1> -->
+                    <ul class="menu">
+                        <li class="item">i<button  type="button" class="btn choice-animal" id="cat">시작하기</button></li>
+                    </ul>
+                </div>
+                <div class="inner-box">
+                    <div class="tit"><h1>키우고 싶은 <br> 반려동물의 종류는?</h1></div>
+                    <ul class="menu">
+                        <li class="item">i<button  type="button" class="btn choice-animal" id="dog">강아지</button></li>
+                        <li class="item">i<button  type="button" class="btn choice-animal" id="cat">고양이</button></li>
+                    </ul>
+                </div>
+                <!-- 강아지를 선택했을 경우만 나타내게 -->
+                <div class="inner-box">
+                    <h1>가족구성원의 수는?</h1>
+                    <ul class="menu">
+                        <li class="item">i<button  type="button" class="btn">1인</button></li>
+                        <li class="item">i<button  type="button" class="btn">2인</button></li>
+                        <li class="item">i<button  type="button" class="btn">3인</button></li>
+                        <li class="item">i<button  type="button" class="btn">4인이상</button></li>
+                    </ul>
+                </div>
+                <div class="inner-box">
+                    <h1>현재 거주하고 있는 <br> 거주지의 형태는?</h1>
+                    <ul class="menu">
+                        <li class="item">i<button  type="button" class="btn">아파트/빌라</button></li>
+                        <li class="item">i<button  type="button" class="btn">오피스텔/단독주택(정원미보유)</button></li>
+                        <li class="item">i<button  type="button" class="btn">단독주택(정원보유)</button></li>
+                        <li class="item">i<button  type="button" class="btn">실외 및 상업공간</button></li>
+                        <li class="item">i<button  type="button" class="btn">기타</button></li>
+                    </ul>
+                </div>
+                <div class="inner-box">
+                    <h1>하루에 반려동물이 <br> 혼자있는 시간은?</h1>
+                    <ul class="menu">
+                        <li class="item">i<button  type="button" class="btn">활발하고 밝은 아이</button></li>
+                        <li class="item">i<button  type="button" class="btn">얌전하고 독립적인 아이</button></li>
+                    </ul>
+                </div>
+                <div class="inner-box">
+                    <h1>반려동물을 키워본 경험은</h1>
+                    <ul class="menu">
+                        <li class="item">i<button  type="button" class="btn">있다</button></li>
+                        <li class="item">i<button  type="button" class="btn">없다</button></li>
+                    </ul>
+                </div>
+                <div class="inner-box">
+                    <h1>하루에 반려동물이 <br> 혼자있는 시간은?</h1>
+                    <ul class="menu">
+                        <li class="item">i<button  type="button" class="btn">2시간 미만</button></li>
+                        <li class="item">i<button  type="button" class="btn">2시간 이상 6시간 미만</button></li>
+                        <li class="item">i<button  type="button" class="btn">6시간 이상</button></li>
+                    </ul>
+                </div>
+                <div class="inner-box">
+                    <h1>반려견을 키우고 <br>싶은 이유는?</h1>
+                    <ul class="menu">
+                        <li class="item">i<button  type="button" class="btn">동물이 너무 좋아서</button></li>
+                        <li class="item">i<button  type="button" class="btn">외로워서</button></li>
+                        <li class="item">i<button  type="button" class="btn">아이가 키우고 싶어 해서</button></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        
+
+
+    <script>
+
+        let item = document.querySelectorAll('.item');
+        let cnt = 0;
+
+        function activeFun() {
+            item[cnt].classList.add('active');
+            cnt++;
+            if (cnt >= item.length) {
+                clearInterval(addActive);
+            }
+        }
+
+        let addActive = setInterval(activeFun, 130);
+
+
+
+        /*
+        type : 반려동물의 유형
+        name : 반려동물의 이름
+        hairLoss : 털빠짐이 있는가
+        activity : 활동적인지
+        */
+
+        let animalData = [
+  { type: 'dog', name: '말티즈', hairLoss: 'no', activity: 'yes' },
+  { type: 'dog', name: '토이푸들', hairLoss: 'no', activity: 'yes' },
+  { type: 'dog', name: '포메라니안', hairLoss: 'yes', activity: 'yes' },
+  { type: 'dog', name: '요크셔테리어', hairLoss: 'yes', activity: 'no' },
+  { type: 'dog', name: '비숑프리제', hairLoss: 'no', activity: 'no' },
+];
+
+        
+        
+
+
+        //강아지 또는 고양이 선택시 배열에 저장
+        document.querySelectorAll('.choice-animal').forEach(button =>{
+            button.addEventListener('click',()=>{
+
+                console.log('테스트');
+            });
+        });
+
+
+
+
+
+        //버튼 클릭하면 오른쪽으로 넘어가는 기능
+        document.querySelectorAll('.btn').forEach(button => {
+        button.addEventListener('click', () => {
+            document.querySelector('.container').style.transform += 'translate(-100vw)';
+            document.querySelector('.container').style.transition =  '0.9s';
+        });
+    });
+
+    </script>
+</body>
+
+</html>

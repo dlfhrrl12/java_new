@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/공용.css">
+    <link rel="stylesheet" href="./css/07_문의게시판.css">
+</head>
+<body>
+
+    <a href="https://www.kakaocorp.com/page/service/service/KakaoTalk" id="kakao-fixed" class="linkFiexd"><img src="./img/00_공용/kakaotalkFixed.png" alt="">
+        <p>카톡상담</p>
+    </a>
+    <a href="https://support.google.com/?hl=ko" id="customer-fixed" class="linkFiexd"><img src="./img/00_공용/고객상담Fixed.png" alt="">
+        <p>고객센터</p>
+    </a>
+    <a href="#top" id="top-fixed"><img src="./img/00_공용/TopButton.png" alt=""></a>
+
+    <header>
+        <div class="inner" id="#top">
+            <div class="mainIcon">
+                <div>
+                    <a href="./01_메인페이지.html"><img id="mainLogoImg" src="./img/00_공용/이게멍냥.jpg" alt=""></a>
+                </div>
+                <div class="login">
+                    <ul>
+                        <li><a href="" class="mypage">마이페이지</a></li>
+                        <li><a onclick="openPopup()" class="login-popup">로그인</a></li>
+                        <li><a href="./02_회원가입_01.html" id="sign-up-popup">회원가입</a></li>
+                    </ul>
+                </div>
+                <a href="./01_메인페이지.html" class="title" id="public-title"><img src="./img/00_공용/로고이미지.PNG" alt=""></a>
+            </div>
+        </div>
+    </header>
+    <div class="nav">
+        <ul>
+            <li><a href="./강아지,고양이 상세/03_강아지.html" id="public-dog">강아지</a></li>
+            <li><a href="./강아지,고양이 상세/01_고양이.html" id="public-cat">고양이</a></li>
+            <li><a href="./08_혜택,제휴.html" id="public-benefits">혜택</a></li>
+            <li><a href="./09_오시는길.html" id="public-direction">오시는 길</a></li>
+            <li><a href="./06_분양후기.html" id="public-review">입양 후기</a></li>
+            <li><a href="./10_반려동물추천.html" id="public-suggestion">반려동물 추천</a></li>
+            <li><a href="./07_문의게시판.html" id="public-inquiry">문의 사항</a></li>
+        </ul>
+    </div>
+    
+    <div class="container">
+
+        <div class="title-a">
+            <p>문 의 게 시 판</p>
+            <h2>반려동물 입양상담 및 다양한 문의를 작성해주세요!</h2>
+        </div>
+        <div class="board">
+            
+            <table id="q" class="ta">
+                
+                <hr>
+                    <tr>
+                        <th>번호</th>
+                        <th>제목</th>
+                        <th>이름</th>
+                        <th>작성일</th>
+                        <th>상태</th>
+                    </tr> 
+
+                <tr>
+                    <td>1</td>
+                    <td>🔒입양 후기 이벤트 신청</td>
+                    <td>서*일</td>
+                    <td>2024.02.29</td>
+                    <td><button class="green">답변완료</button></td>
+                </tr>
+          
+    
+                <tr>
+                    <td>2</td>
+                    <td>🔒입양상담 문의입니다</td>
+                    <td>임*두</td>
+                    <td>2024.02.22</td>
+                    <td><button class="red">미확인</button></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>🔒방문 예약 문의</td>
+                    <td>이*하</td>
+                    <td>2024.02.19</td>
+                    <td><button class="green">답변완료</button></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>🔒강아지 입양 문의</td>
+                    <td>남궁*연</td>
+                    <td>2024.02.05</td>
+                    <td><button class="green">답변완료</button></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>🔒고양이 입양상담 예약</td>
+                    <td>박*미</td>
+                    <td>2024.01.02</td>
+                    <td><button class="red">미확인</button></td>
+                </tr>
+            </table>
+            
+            <a id="writing" href="./07_글쓰기.html">
+            <div class="list">
+                <button type="button">
+                    글쓰기
+                </button>
+            </div>
+            </a>
+
+            <div class="bw">
+                <div class="btn" id="al">
+                    <button type="button" class="bt">|<</button>
+                    <button type="button" class="bt"><</button>
+                    <button type="button" class="bt">1</button>
+                    <button type="button" class="bt">2</button>
+                    <button type="button" class="bt">3</button>
+                    <button type="button" class="bt">4</button>
+                    <button type="button" class="bt">></button>
+                    <button type="button" class="bt">>|</button>
+                </div>
+               
+            </div>
+        </div>
+
+        <footer>
+            <div class="inner">
+                <div class="up">
+                    <ul>
+                        <li><a href="https://sw.ezenac.co.kr/ezen/campus/campus_info.asp">회사소개</a></li>
+                        <li><a href="https://sw.ezenac.co.kr/ezen/etc/terms_conditions.asp">서비스이용약관</a></li>
+                        <li><a href="https://sw.ezenac.co.kr/ezen/etc/privacy_policy.asp" id="gain">개인정보 처리방침</a></li>
+                    </ul>
+                </div>
+                <div class="down">
+                    <p>이개멍냥 Company</p>
+                    <p>대표자: 김이젠</p>
+                    <p>인천광역시 남동구 인주대로 593 엔타스빌딩 12층</p>
+                    <p>영업시간 : 09:00-21:00 연중무휴</p>
+                    <p>T.02-6956-2408 &nbsp; F.02-6951-2418 &nbsp; Copyright by EZEN. All rights reserved</p>
+                </div>
+            </div>
+            </div>
+        </footer>
+
+
+    <!-- 로그인 팝업 페이지 -->
+
+    <div id="loginPopup" class="popup">
+        <span class="close" onclick="closePopup()">&times;</span>
+        <h2 class="login-logo">로그인</h2>
+        <form id="loginForm">
+            <input type="text" class="input-box" id="username" name="username" placeholder=" 아이디">
+            <input type="password" class="input-box" id="password" name="password" placeholder=" 비밀번호">
+            <button type="button" class="loginBtn" onclick="login()" disabled>로그인</button>
+            <a href="./02_회원가입_01.html" class="other-info">회원가입</a>
+            <a href="" class="other-info">아이디· 비밀번호 찾기</a>
+        </form>
+    </div>
+
+    <div id="overlay" class="overlay"></div>
+
+    <script src="./js/공용.js"></script>
+
+
+
+
+
+
+<script>
+
+    document.getElementById('writing').addEventListener('click',()=>{
+        let writingLoginCheck = sessionStorage.getItem('loginCheck');
+        if(writingLoginCheck == 'false' || writingLoginCheck == null){
+            alert('회원만 이용 하실 수 있습니다. \n로그인을 해주세요.');
+            event.preventDefault();
+            return;
+        }
+    });
+
+    document.getElementById('al').addEventListener('click',()=>{
+        alert('마지막 페이지 입니다.');
+    });
+    document.getElementById('q').addEventListener('click',()=>{
+        alert('작성자와 관리자만 볼 수 있는 보안 게시물입니다.');
+    });
+
+</script>
+
+
+
+
+
+
+
+
+    </div>
+
+</body>
+</html>

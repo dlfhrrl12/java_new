@@ -1,0 +1,105 @@
+/* @font-face {
+    font-family: "Gaegu";
+    src: url(/font/Gaegu/Gaegu-Bold.ttf);
+}
+@font-face {
+    font-family: "Gothic A1";
+    src: url(/font/Gothic_A1/GothicA1-Regular.ttf);
+}
+
+body {
+    font-family: Gaegu;
+    position: relative;
+}
+
+body {
+    font-family: "Gothic A1";
+} */
+@font-face{
+    font-family: "Cute-Font";
+    src: url(../font/Cute_Font/CuteFont-Regular.ttf);
+}
+.container{
+    text-align: center;
+     top: 50%;
+     left: 50%;
+     margin: 0 auto;
+     display: flex;
+     align-items: center;
+     flex-direction: column;
+     justify-content: center;
+}
+.container>.main-img{
+    /* border: 1px solid black; */
+    width: 900px;
+    height: 600px;
+    margin-bottom: 50px;
+}
+.container>.main-img>img{
+    border: 3px solid rgb(225, 155, 167);
+    border-radius: 10px;
+    width: 900px;
+    height: 600px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+}
+.container>.comming>p{
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+.container>.inside{
+    line-height: 30px;
+}
+.container>.inside>.intro>p{
+    font-size: 25px;
+}
+.container>.inside>.address>p{
+    font-size: 20px;
+}
+.container>.API{
+    border: 1px solid rgb(225, 155, 167);
+    width: 50%;
+    height: 500px;
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-bottom: none;
+}
+.container>.API>img{
+    width: 1200px;
+    height: 500px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+}
+.container>.API-img{
+    width: 50%;
+    height: 50px;
+    border-top: none;
+    border: 1px solid rgb(225, 155, 167);
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    margin-bottom: 70px;
+}
+.container>.API-img>a{
+    padding: 10px;
+    height: 70px;
+    font-size: 30px;
+    font-weight: 700;
+    color: white;
+    background-color: rgb(249, 182, 219);
+    font-family: "Cute-Font";
+}
+.container>.API-img>a:hover{
+    background-color: white;
+    color: rgb(236, 113, 177);
+    height: 50px;
+    transition: 0.5s;
+    font-family: "Cute-Font";
+}

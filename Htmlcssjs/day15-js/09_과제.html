@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        로또 번호 채우기
+        1~45까지 중복되지 않게 숫자 6개를 랜덤으로 추출 => 출력
+        set 객체를 사용하여 생성
+        랜덤 번호 버튼을 누르면 랜덤 수가 나타나고 다시 누르면 그값은 초기화 되면서 다시 출력된다.
+        lottoNum()이 7자리를 출력하면서 마지막 자릿수는 '[값]'으로 감싸서 출력한다.
+        마지막으로 결과 확인 버튼 기능은 randomNum()과 lottoNum()의 숫자를 비교해서 맞는수가 몇개 나오는지 출력
+     -->
+    <h1>
+        1~45까지 중복되지 않게 숫자 6개를 랜덤으로 추출 => 출력
+        set 객체를 사용하여 생성
+    </h1>
+    <button type="button" id="makeRandom">랜덤번호 6자리 생성(출력)</button>
+    <h1 id="printNum">로또번호</h1>
+    <button type="button" id="makeRandom2">당첨번호 7자리(마지막번호는 보너스번호) 생성(출력)</button>
+    <h1 id="printNum2">당첨번호</h1>
+    <button type="button" onclick="ranking()">결과확인</button>
+    <h1 id="printResult">당첨확인</h1>
+
+    <script>
+        const lottoArr=[]; //user
+        const lottoSet = new Set();
+        const rNumArr = []; //당첨번호
+        const rNumSet = new Set();
+        let bonus = 0;
+
+        document.getElementById('makeRandom').addEventListener('click',()=>{
+            //set/map clear() : 비우기
+            //array splice(index, count) : index부터 count까지 제거
+            lottoArr.splice(0,6); // 기존 배열값 버리기
+            lottoSet.clear();
+            randomNum(lottoSet, lottoArr, 6); //random값 채우기
+            console.log(lottoSet);
+            console.log(lottoArr);
+            document.getElementById('printNum').innerText = lottoArr;
+        });
+        document.getElementById('makeRandom2').addEventListener('click',()=>{
+            rNumArr.splice(0,7);
+            rNumSet.clear();
+            randomNum(rNumSet, rNumArr, 7);
+            console.log(rNumSet);
+            console.log(rNumArr);
+            bonus = rNumArr.pop(); //마지막 요소를 제거후 마지막 요소를 리턴
+            document.getElementById('printNum2').innerText=rNumArr+'['+bonus+']';
+        });
+
+        function ranking(){
+             let count = 0;
+            // for(const a of lottoArr){
+            //     for(const b of rNumArr){ //보너스 번호 빠져있는 상태
+            //         if(a==b){
+            //             count++;
+            //         }
+            //     }
+            // }
+
+            lottoArr.forEach(function(a){
+                rNumArr.forEach(function(b){
+                    if(a==b){
+                        count++;
+                    }
+                })
+            })
+            console.log(count);
+
+            let print='';
+            switch(count){
+                case 6: print='축!! 1등 당첨!!'; break;
+                case 5: 
+                    //lottoArr에 보너스 값이 있는지 체크
+                    //includes() : 하나의 문자열이 다른 무자열에 있는지 확인 true / false 리턴
+                    lottoArr.includes(bonus) ? print='축!! 2등 당첨!!' : print='축!! 3등 당첨!!';
+                    break;
+                case 4: print='축!! 4등 당첨!!'; break;
+                case 3: print='축!! 5등 당첨!!'; break;
+                default: print="꽝~!!"; break;
+            }
+            document.getElementById('printResult').innerText = print;
+        }
+
+        function randomNum(lottoSet, arr, num){
+            while(lottoSet.size < num){
+                let rNum = Math.floor(Math.random()*10)+1;
+                lottoSet.add(rNum);
+            }
+            for(let num of lottoSet){
+                arr.push(num);
+            }
+        }
+    </script>
+</body>
+</html>

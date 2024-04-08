@@ -1,0 +1,29 @@
+
+@keyframes logo{
+    0%{
+        left: 100%;
+    }
+    25%{
+        left: 0;
+    }
+    30%{
+        transform: rotate(30deg);
+        transform: rotate(-30deg);
+    }
+}
+.logo{
+    position: relative;
+    animation-name: logo;
+    animation-duration: 3s; 
+    animation-iteration-count: infinite;
+}
+
+.total1{
+    transition: font-size 2s;
+}
+.total1:hover{
+    font-size: 25px;
+}
+
+
+

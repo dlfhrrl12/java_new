@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gaegu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/고양이강아지 상세_reset.css">
+    <link rel="stylesheet" href="../css/강아지고양이상세_공용.css">
+    <style>
+        @import url(../11_reset.css);
+        body{
+           
+        font-family: "Gaegu", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+
+        }
+        
+        .cats{
+            
+            /* 그림사이즈 230 마진 20 */
+            /* 230*3 + 20*4 */
+            width:1200px;
+            margin: 0 auto;
+            /* border: 1px solid black; */
+            text-align: center;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .cats>a{
+            margin: 0 50px;
+            text-decoration: none;
+            color: black;
+            position: relative;
+        }
+        .cats ul>li{
+            font-size: 20px;
+            margin: 15px;
+        }
+
+        
+       
+        .cats>a>div>img{
+            width: 250px;
+            height: 250px;
+        }
+        .cats>a>div>img:hover{
+            transform: scale(1.1);
+            transition: transform 0.3s;
+        }
+       
+        .container>nav>div>span>a{
+          
+            display: flex;
+            justify-content: right;
+            font-size: large;
+            color: black;
+            margin: 0 10px;
+            font-size: 20px;
+            color: #EB6464;
+            
+        }
+        .subtitle{
+            display: flex;
+            justify-content: center;
+        }
+        .subtitle>span{
+            margin: 50px 30px;
+        }
+        .container>nav>div>span>a:hover{
+            transform: scale(1.5);
+            font-weight: 700;
+            color: #A52A2A;
+            transition: transform 0.2s;
+        }
+        .plus>span{
+            /* border: 1px solid #EB6464; */
+            width: 80px;
+            height: 50px;
+            background-color: #e8a8a8;
+            display: flex;
+            justify-content: space-around;
+            margin: 50px auto;
+            text-align: center;
+          
+        }
+        .plus>span>a{
+            font-size: 20px;
+            line-height: 50px;
+        }
+        .plus>span>a:hover{
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <a href="https://www.kakaocorp.com/page/service/service/KakaoTalk" id="kakao-fixed" class="linkFiexd"><img src="../img/00_공용/kakaotalkFixed.png" alt="">
+        <p>카톡상담</p>
+    </a>
+    <a href="https://support.google.com/?hl=ko" id="customer-fixed" class="linkFiexd"><img src="../img/00_공용/고객상담Fixed.png" alt="">
+        <p>고객센터</p>
+    </a>
+    <a href="#top" id="top-fixed"><img src="../img/00_공용/TopButton.png" alt=""></a>
+
+    <header>
+        <div class="inner" id="#top">
+            <div class="mainIcon">
+                <div>
+                    <a href="../01_메인페이지.html"><img id="mainLogoImg" src="../img/00_공용/이게멍냥.jpg" alt=""></a>
+                </div>
+                <div class="login">
+                    <ul>
+                        <li><a href="" class="mypage">마이페이지</a></li>
+                        <li><a onclick="openPopup()" class="login-popup">로그인</a></li>
+                        <li><a href="../02_회원가입_01.html" id="sign-up-popup">회원가입</a></li>
+                    </ul>
+                </div>
+                <a href="../01_메인페이지.html" class="title" id="public-title"><img src="../img/00_공용/로고이미지.PNG" alt=""></a>
+            </div>
+        </div>
+    </header>
+    <div class="nav">
+        <ul>
+            <li><a href="../강아지,고양이 상세/03_강아지.html" id="public-dog">강아지</a></li>
+            <li><a href="../강아지,고양이 상세/01_고양이.html" id="public-cat">고양이</a></li>
+            <li><a href="../08_혜택,제휴.html" id="public-benefits">혜택</a></li>
+            <li><a href="../09_오시는길.html" id="public-direction">오시는 길</a></li>
+            <li><a href="../06_분양후기.html" id="public-review">입양 후기</a></li>
+            <li><a href="../10_반려동물추천.html" id="public-suggestion">반려동물 추천</a></li>
+            <li><a href="../07_문의게시판.html" id="public-inquiry">문의 사항</a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <nav class="nav1">
+            <div class="subtitle">
+                <span><a href="../강아지,고양이 상세/01_고양이.html">전체보기</a></span>
+                <span><a href="">브리티쉬</a></span>
+                <span><a href="">먼치킨</a></span>
+                <span><a href="">노르웨이 숲</a></span>
+                <span><a href="">러시안 블루</a></span>
+                <span><a href="../강아지,고양이 상세/05_고양이용품.html">고양이 용품</a></span>
+            </div>
+        </nav>
+        <div class="cats" id="cats">
+            <a href="">
+                <div>
+                    <img src="../img/강아지_고양이_상세/카샤카샤라바네온.webp" alt="">
+                </div>
+                <ul class="ul">
+                    <li>고양이섬 카샤카샤 라바 <br>네온옐로우 / 네온핑크</li>
+                    <del>5,800</del>
+                    <li>2,900</li>
+                    
+                </ul>
+            </a>
+            <a href="">
+                <div>
+                    <img src="../img/강아지_고양이_상세/고양이카샤카샤.webp" alt="">
+                </div>
+                <ul class="ul">
+                    <li>반려일상 고수의 낚시대 <br>셀프와이어</li>
+                    <del>8,000</del>
+                    <li>5,900</li>
+                    
+                </ul>
+            </a>
+            <a href="">
+                <div>
+                    <img src="../img/강아지_고양이_상세/호랑이낚시대.webp" alt="">
+                </div>
+                <ul class="ul">
+                    <li>호랑이 낚시대</li>
+                    <del>20,000</del>
+                    <li>18,000</li>
+                    
+                </ul>
+            </a>
+            <a href="">
+                <div>
+                    <img src="../img/강아지_고양이_상세/샌드바이블무향.webp" alt="">
+                </div>
+                <ul class="ul">
+                    <li>샌드바이블 무향</li>
+                    <del>19,800</del>
+                    <li>14,800</li>
+                    
+                </ul>
+            </a>
+            <a href="">
+                <div>
+                    <img src="../img/강아지_고양이_상세/ㅁㅊ모래.webp" alt="">
+                </div>
+                <ul class="ul">
+                    <li>ㅁㅊ모래</li>
+                    <del>15,900</del>
+                    <li>13,900</li>
+                    
+                </ul>
+            </a>
+            <a href="">
+                <div>
+                    <img src="../img/강아지_고양이_상세/호랑이두부모래.webp" alt="">
+                </div>
+                <ul class="ul">
+                    <li>호랑이 두부모래</li>
+                    <del>5,800</del>
+                    <li>2,900</li>
+                    
+                </ul>
+            </a>
+            <a href="">
+                <div>
+                    <img src="../img/강아지_고양이_상세/고양이촉촉트릿2열빙어.webp" alt="">
+                </div>
+                <ul class="ul">
+                    <li>고양이 촉촉트릿 열빙어</li>
+                    <del>11,900</del>
+                    <li>8,900</li>
+                    
+                </ul>
+            </a>
+            <a href="">
+                <div>
+                    <img src="../img/강아지_고양이_상세/고양이촉촉트릿.webp" alt="">
+                </div>
+                <ul class="ul">
+                    <li>고양이 촉촉트릿</li>
+                    <del>10,800</del>
+                    <li>7,800</li>
+                    
+                </ul>
+            </a>
+            <a href="">
+                <div>
+                    <img src="../img/강아지_고양이_상세/고양이별자리스틱.webp" alt="">
+                </div>
+                <ul class="ul">
+                    <li>고양이 별자리스틱 10ps</li>
+                    <del>7,800</del>
+                    <li>4,900</li>
+                    
+                </ul>
+            </a>
+            
+        </div>
+        
+        <footer>
+            <div class="inner">
+                <div class="up">
+                    <ul>
+                        <li><a href="https://sw.ezenac.co.kr/ezen/campus/campus_info.asp">회사소개</a></li>
+                        <li><a href="https://sw.ezenac.co.kr/ezen/etc/terms_conditions.asp">서비스이용약관</a></li>
+                        <li><a href="https://sw.ezenac.co.kr/ezen/etc/privacy_policy.asp" id="gain">개인정보 처리방침</a></li>
+                    </ul>
+                </div>
+                <div class="down">
+                    <p>이개멍냥 Company</p>
+                    <p>대표자: 김이젠</p>
+                    <p>인천광역시 남동구 인주대로 593 엔타스빌딩 12층</p>
+                    <p>영업시간 : 09:00-21:00 연중무휴</p>
+                    <p>T.02-6956-2408 &nbsp; F.02-6951-2418 &nbsp; Copyright by EZEN. All rights reserved</p>
+                </div>
+            </div>
+            </div>
+        </footer>
+        <!-- 로그인 팝업 페이지 -->
+        <div id="loginPopup" class="popup">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <h2 class="login-logo">로그인</h2>
+            <form id="loginForm">
+                <input type="text" class="input-box" id="username" name="username" placeholder=" 아이디">
+                <input type="password" class="input-box" id="password" name="password" placeholder=" 비밀번호">
+                <button type="button" class="loginBtn" onclick="login()" disabled>로그인</button>
+                <a href="../02_회원가입_01.html" class="other-info">회원가입</a>
+                <a href="" class="other-info">아이디· 비밀번호 찾기</a>
+            </form>
+        </div>
+        <div id="overlay" class="overlay"></div>
+    
+    </div>
+    <script>
+
+        document.getElementById('cats').addEventListener('click',()=>{
+            alert('상품 준비중입니다!');
+        })
+        
+       
+    </script>
+        <script src="../js/공용.js"></script>
+</body>
+</html>
